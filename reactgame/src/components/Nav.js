@@ -1,6 +1,6 @@
 import React,{useState, useRef, useEffect} from 'react';
 
-const Nav = () => {
+const Nav = (props) => {
     const [selectedMenu, setSelectedMenu]= useState('')
     const ref= useRef()
 
@@ -19,13 +19,23 @@ const Nav = () => {
         return() => {
             document.body.removeEventListener('click',onBodyClick,{capture:true,})
         }
-      }, []); 
+      }, [selectedMenu]); 
 
+    const setUserPage = (page) => {
+        setSelectedMenu('');
+        props.setUserPage(page)
+    }
+
+  
     return (
         <div >
             <ul className="nav nav-tabs">
                  <li className="nav-item">
-                     <span className="nav-link active" aria-current="page" href="#">Background</span>
+                     <span className="nav-link active" aria-current="page" href="#" 
+                     onClick={() => {
+                         setUserPage("Background")
+                     }}
+                     >Background</span>
                 </li>
                 <li ref={ref} className="nav-item  dropdown" onClick={() => {
                     setSelectedMenu('Hints')
@@ -34,9 +44,22 @@ const Nav = () => {
                     <ul                     
                     className={`dropdown-menu ${selectedMenu==="Hints"?'show':""}`} 
                     >
-                        <li><span className="dropdown-item" href="#">Weapon</span></li>
-                        <li><span className="dropdown-item" href="#">Location </span></li>       
-                        <li><span className="dropdown-item" href="#">Perp </span></li>                
+                        <li><span className="dropdown-item" href="#" onClick={(e) => {
+                         e.stopPropagation()
+                         setUserPage("HintsWeapon");
+                         setSelectedMenu('');
+                        }}>Weapon</span></li>
+                        <li><span className="dropdown-item" href="#" onClick={(e) => {
+                         e.stopPropagation()
+                         setUserPage("HintsLocation");
+                         setSelectedMenu('');
+                     }}>Location </span></li>       
+                        <li><span className="dropdown-item" href="#" onClick={(e) => {
+                         e.stopPropagation()
+                         setSelectedMenu('');
+                         setUserPage("HintsName");
+                         
+                     }}>Perp </span></li>                
                     </ul>
                 </li>
             </ul>

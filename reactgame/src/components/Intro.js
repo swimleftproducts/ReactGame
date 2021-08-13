@@ -9,7 +9,7 @@ const Intro = (props) => {
             <img className="img-fluid" src="https://wallpaperaccess.com/full/396534.jpg" alt='test'/>
             <button 
                 onClick={() => {
-                props.onClick('Hints')
+                props.onClick('Background')
                 }}
                 className="btn btn-primary btn-lg  introButton">Ready to play?</button>
 
