@@ -6,12 +6,10 @@ const Nav = () => {
 
     useEffect(() => {
         const onBodyClick= (event) => {
-            console.log(event.target)
             if(ref.current.contains(event.target)){
                return
             }
-            setSelectedMenu('');
-                
+            setSelectedMenu('');       
         }
 
         document.body.addEventListener(
