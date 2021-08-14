@@ -22,7 +22,7 @@ const Nav = (props) => {
       }, [selectedMenu]); 
 
     const setUserPage = (page) => {
-        setSelectedMenu('');
+        setSelectedMenu(page);
         props.setUserPage(page)
     }
 
@@ -31,16 +31,28 @@ const Nav = (props) => {
         <div >
             <ul className="nav nav-tabs">
                  <li className="nav-item">
-                     <span className="nav-link active" aria-current="page" href="#" 
+                     <span 
+                     className={`nav-link ${selectedMenu==="Background"?"active":""} `} aria-current="page" href="#" 
                      onClick={() => {
-                         setUserPage("Background")
+                         setUserPage("Background")  
+                        
                      }}
-                     >Background</span>
+                     >  
+                        Background
+                    </span>
                 </li>
-                <li ref={ref} className="nav-item  dropdown" onClick={() => {
+                <li ref={ref} className="nav-item dropdown"
+                     onClick={() => {
                     setSelectedMenu('Hints')
+                   
                 }}>
-                    <span className="nav-link  dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Hints</span>
+                    <span className={`nav-link ${(
+                        selectedMenu==="Hints" ||
+                        props.userPage==="HintsWeapon" ||
+                        props.userPage==="HintsName" ||
+                        props.userPage==="HintsLocation"   
+                    )?"active":""} dropdown-toggle`}
+                     data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Hints</span>
                     <ul                     
                     className={`dropdown-menu ${selectedMenu==="Hints"?'show':""}`} 
                     >

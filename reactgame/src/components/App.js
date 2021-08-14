@@ -13,7 +13,7 @@ const [story,setStory] = useState('')
     useEffect(() => {
         const newStory = gameSetUp.choose()
         setStory(newStory)
-        console.log(newStory)
+       
     },[])
 
     
@@ -37,7 +37,7 @@ const [story,setStory] = useState('')
     
     return(
         <div >
-            {userPage!=="Intro"?<Nav setUserPage={setUserPage}/>:null}
+            {userPage!=="Intro"?<Nav userPage={userPage} setUserPage={setUserPage}/>:null}
             
            {decideWhatToShow(userPage)}
         </div>
