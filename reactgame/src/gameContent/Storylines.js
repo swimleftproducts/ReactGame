@@ -48,7 +48,7 @@ const gameSetUp = {
             title: "The Shire",
             background1: "The shire needs your help in finding the creature that is terrorizing the hobbits. Luckily, each attack has resulted in hints left behind...",
             introImage: "./assets/2/introimage.png",
-            hintImage: "./assets/2/hintimage.jpeg",
+            hintImage: "assets/2/hintimage.jpeg",
             images: {
                 weapon: {
                     image: ['./assets/2/weaponimages/1.jpeg', './assets/2/weaponimages/2.jpeg', './assets/2/weaponimages/3.jpeg', './assets/2/glamdring.jpeg', './assets/2/weaponimages/5.jpeg', './assets/2/weaponimages/6.jpeg'],
@@ -67,11 +67,11 @@ const gameSetUp = {
 
             background2: ``,
             weapon: "Glamdring",
-            weaponImage: "./assets/2/glamdring.jpeg",
+            HintsWeaponImage: "assets/2/glamdring.jpeg",
             location: "Hobbiton",
-            locationImage: "./assets/2/hobbiton.jpeg",
+            HintsLocationImage: "assets/2/hobbiton.jpeg",
             name: "Nazgul",
-            nameImage: "./assets/2/nazgul.jpeg",
+            HintsNameImage: "assets/2/nazgul.jpeg",
             HintsWeapon: "Powerful Weapon",
             HintsWeapon1: "This weapon was build by elvish hands",
             HintsWeapon2:"Later it was wield by Gandolf. How did the killer get it?",
@@ -99,9 +99,9 @@ const gameSetUp = {
     // this method chooses what story to use
     choose: function() {
         // pick random story, the random is removed for now
-        const num = Math.floor(Math.random() * this.stories.length)
+       // const num = Math.floor(Math.random() * this.stories.length)
       
-       // let num = 1
+        let num = 1
             // this methhod returns a random story the story
         this.storyInUse = num
         return this.stories[num];

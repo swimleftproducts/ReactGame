@@ -13,11 +13,7 @@ const MenuInfo = [
         {
         label: "Weapon",    
         value: "HintsLocation"
-        },
-        {
-            label: "WhoKnows",    
-            value: "Other"
-        }
+        } 
         
     ]
 },

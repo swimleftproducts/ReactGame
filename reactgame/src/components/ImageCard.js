@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ImageCard = (props) => {
+const ImageCard = ({imgSrc}) => {
     
     return(
-        <div>
-           Image to come
-        </div>
+      
+          <img className="img-fluid" alt="hintimage" src={imgSrc}/>
+        
     )
 }
 

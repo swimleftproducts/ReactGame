@@ -4,3 +4,13 @@
     left:50vw;
 }
 
+.textbox{
+
+  position: absolute;
+  
+  top: 40vh;
+  right: 10vw;
+  width: 400px;
+  height: 200px;
+
+}

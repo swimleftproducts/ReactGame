@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import Dropdown from './navComponents/Dropdown'
 import BasicTab from './navComponents/BasicTab'
 import MenuInfo from '../gameContent/MenuInfo'
+import "./Components.css"
 
 const Nav = (props) => {
     const [selectedMenu, setSelectedMenu]= useState('')
@@ -32,6 +33,7 @@ const Nav = (props) => {
                 <BasicTab selectedMenu={selectedMenu} setUserPage={setUserPage} label={"Results"} value={"Results"} />
                 
             </ul>
+            
             <a class=" navbar-brand" href="http://localhost:3000/">RESET</a>
           </nav>  
         </div>

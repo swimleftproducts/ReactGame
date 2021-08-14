@@ -29,7 +29,7 @@ const [story,setStory] = useState('')
             )
         }else if ((userPage==="HintsWeapon") || (userPage==="HintsLocation") ||(userPage==="HintsName")){
             return(
-                 <Hints story={story} userPage={userPage}/>
+                 <Hints story={story} userPage={userPage} setUserPage={setUserPage}/>
             )
         }else if ((userPage==="SelectWeapon") || (userPage==="SelectLocation") ||(userPage==="SelectName")){
             return(
