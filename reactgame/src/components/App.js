@@ -13,6 +13,7 @@ const [story,setStory] = useState('')
     useEffect(() => {
         const newStory = gameSetUp.choose()
         setStory(newStory)
+        console.log(newStory)
     },[])
 
     
@@ -25,19 +26,11 @@ const [story,setStory] = useState('')
             return(
                  <Background/>
             )
-        }else if (userPage==="HintsWeapon"){
+        }else if ((userPage==="HintsWeapon") || (userPage==="HintsLocation") ||(userPage==="HintsName")){
             return(
                  <Hints story={story} userPage={userPage}/>
             )
-        }else if (userPage==="HintsLocation"){
-            return(
-                 <Hints story={story} userPage={userPage}/>
-            )
-        }
-        else if (userPage==="HintsName"){
-            return(
-                 <Hints story={story} userPage={userPage}/>
-            )
+        
         }
 
     }

@@ -100,7 +100,7 @@ const gameSetUp = {
     choose: function() {
         // pick random story, the random is removed for now
         const num = Math.floor(Math.random() * this.stories.length)
-        console.log(num)
+      
        // let num = 1
             // this methhod returns a random story the story
         this.storyInUse = num
