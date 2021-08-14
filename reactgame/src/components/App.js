@@ -3,7 +3,8 @@ import Intro from './Intro'
 import Nav from './Nav'
 import Hints from './Hints'
 import Background from './Background'
-import gameSetUp from '../gameContent/Storylines'
+import gameSetUp from '../gameContent/Storylines';
+import UserSelection from './Selection';
 
 const App = () => {
 
@@ -28,9 +29,9 @@ const [story,setStory] = useState('')
             )
         }else if ((userPage==="HintsWeapon") || (userPage==="HintsLocation") ||(userPage==="HintsName")){
             return(
-                 <Hints story={story} userPage={userPage}/>
+                 [<Hints story={story} userPage={userPage}/>,
+                 <UserSelection UserSelection={userPage}/>]
             )
-        
         }
 
     }
