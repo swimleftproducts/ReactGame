@@ -1,32 +1,25 @@
-import React,{useState, useRef, useEffect} from 'react';
+import React,{useState} from 'react';
+import Dropdown from './navComponents/Dropdown'
+import MenuInfo from '../gameContent/MenuInfo'
 
 const Nav = (props) => {
     const [selectedMenu, setSelectedMenu]= useState('')
-    const ref= useRef()
 
-    useEffect(() => {
-        const onBodyClick= (event) => {
-            if(ref.current.contains(event.target)){
-               return
-            }
-            setSelectedMenu('');       
-        }
-
-        document.body.addEventListener(
-          "click",onBodyClick,{ capture: true, }         
-        );
-
-        return() => {
-            document.body.removeEventListener('click',onBodyClick,{capture:true,})
-        }
-      }, [selectedMenu]); 
-
+    //used to hangle changing the userPage state when user clicks on a menu item
+    // this also set shte selectedMenu state that is conatined in Nav
     const setUserPage = (page) => {
         setSelectedMenu(page);
         props.setUserPage(page)
     }
 
-  
+    //this is used to .map through the array that contains all the items we want in our drop down
+    const renderDropdowns = MenuInfo.map((element,index)=>{
+        return(
+           <Dropdown menuInfo={element} setUserPage={setUserPage} userPage={props.userPage} setSelectedMenu={setSelectedMenu} selectedMenu={selectedMenu} />
+        )
+    })
+    
+    // this part returns the background menu tabl hard coded and then the results of the renderDropdowns from up above
     return (
         <div >
             <ul className="nav nav-tabs">
@@ -35,13 +28,14 @@ const Nav = (props) => {
                      className={`nav-link ${selectedMenu==="Background"?"active":""} `} aria-current="page" href="#" 
                      onClick={() => {
                          setUserPage("Background")  
-                        
-                     }}
-                     >  
+                     }}>  
                         Background
                     </span>
                 </li>
-                <li ref={ref} className="nav-item dropdown"
+                {/* This is used to show all the drop down menus */}
+                {renderDropdowns}
+
+                {/* <li ref={ref} className="nav-item dropdown"
                      onClick={() => {
                     setSelectedMenu('Hints')
                    
@@ -73,7 +67,7 @@ const Nav = (props) => {
                          
                      }}>Perp </span></li>                
                     </ul>
-                </li>
+                </li> */}
             </ul>
         </div>
     )

@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 
 class UserSelection extends Component {
-    constructor(props) {
-        super(props);
-
-    }
+   
     render() {
         return (
             <div>
-                User Selection <br/>
-                {this.props.UserSelection}
+                User Selection: <br/>
+                {this.props.userPage}
             </div>
         )
     }
