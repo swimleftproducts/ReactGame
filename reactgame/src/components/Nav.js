@@ -31,7 +31,7 @@ const Nav = (props) => {
         <div >
             <ul className="nav nav-tabs">
                  <li className="nav-item">
-                     <span className="nav-link active" aria-current="page" href="#" 
+                     <span className={`nav-link active`} aria-current="page" href="#" 
                      onClick={() => {
                          setUserPage("Background")
                      }}
