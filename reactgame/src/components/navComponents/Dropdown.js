@@ -44,8 +44,7 @@ const Dropdown = (
     return(
         <li ref={ref} className="nav-item dropdown"
             onClick={() => {
-               setSelectedMenu(menuInfo.Label)
-              
+               setSelectedMenu(menuInfo.Label) 
             }}>
             <span className={`nav-link ${(
                         selectedMenu===menuInfo.Label||
@@ -55,8 +54,7 @@ const Dropdown = (
                     {menuInfo.Label}
             </span>
             <ul                     
-             className={`dropdown-menu ${selectedMenu===menuInfo.Label?'show':""}`} 
-                >
+             className={`dropdown-menu ${selectedMenu===menuInfo.Label?'show':""}`}>
                 {renderedDropdowns}      
             </ul>
         </li>

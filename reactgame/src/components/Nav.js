@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import Dropdown from './navComponents/Dropdown'
+import BasicTab from './navComponents/BasicTab'
 import MenuInfo from '../gameContent/MenuInfo'
 
 const Nav = (props) => {
@@ -23,51 +24,12 @@ const Nav = (props) => {
     return (
         <div >
             <ul className="nav nav-tabs">
-                 <li className="nav-item">
-                     <span 
-                     className={`nav-link ${selectedMenu==="Background"?"active":""} `} aria-current="page" href="#" 
-                     onClick={() => {
-                         setUserPage("Background")  
-                     }}>  
-                        Background
-                    </span>
-                </li>
+                <BasicTab selectedMenu={selectedMenu} setUserPage={setUserPage} label={"Background"} value={"Background"} />
                 {/* This is used to show all the drop down menus */}
                 {renderDropdowns}
-
-                {/* <li ref={ref} className="nav-item dropdown"
-                     onClick={() => {
-                    setSelectedMenu('Hints')
-                   
-                }}>
-                    <span className={`nav-link ${(
-                        selectedMenu==="Hints" ||
-                        props.userPage==="HintsWeapon" ||
-                        props.userPage==="HintsName" ||
-                        props.userPage==="HintsLocation"   
-                    )?"active":""} dropdown-toggle`}
-                     data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Hints</span>
-                    <ul                     
-                    className={`dropdown-menu ${selectedMenu==="Hints"?'show':""}`} 
-                    >
-                        <li><span className="dropdown-item" href="#" onClick={(e) => {
-                         e.stopPropagation()
-                         setUserPage("HintsWeapon");
-                         setSelectedMenu('');
-                        }}>Weapon</span></li>
-                        <li><span className="dropdown-item" href="#" onClick={(e) => {
-                         e.stopPropagation()
-                         setUserPage("HintsLocation");
-                         setSelectedMenu('');
-                     }}>Location </span></li>       
-                        <li><span className="dropdown-item" href="#" onClick={(e) => {
-                         e.stopPropagation()
-                         setSelectedMenu('');
-                         setUserPage("HintsName");
-                         
-                     }}>Perp </span></li>                
-                    </ul>
-                </li> */}
+                <BasicTab selectedMenu={selectedMenu} setUserPage={setUserPage} label={"Finalize"} value={"Finalize"} />
+                <BasicTab selectedMenu={selectedMenu} setUserPage={setUserPage} label={"Results"} value={"Results"} />
+                
             </ul>
         </div>
     )
