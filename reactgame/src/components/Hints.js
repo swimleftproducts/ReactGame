@@ -13,7 +13,7 @@ const Hints = ({story,userPage,setUserPage}) => {
 
     
 
-    //this section contains the logic of what to show enxt when the hint "onward" button is clicked. This stuff is hard coded which is bad. I think it should pull from the menu info to know what to do.
+    //this section contains the logic of what to show next when the hint "onward" button is clicked. This stuff is hard coded which is bad. I think it should pull from the menu info to know what to do.
     const nextClickHandler = () => {
         switch(userPage){
             case "HintsWeapon":
@@ -33,11 +33,11 @@ const Hints = ({story,userPage,setUserPage}) => {
     
     
     return (
-        <div className="container" style={{"height":"80vh"}}>
+        <div className = "container" style = { {"height":"80vh"} }>
             <br></br>
             <br></br>
-            <ImageCard imgSrc={imgSrc}/>
-            <TextBox hint={hint} hint1={hint1} hint2={hint2} nextClickHandler={nextClickHandler}/>
+            <ImageCard imgSrc = {imgSrc} />
+            <TextBox hint = {hint} hint1 = {hint1} hint2 = {hint2} nextClickHandler = {nextClickHandler} />
         </div>
     )
 }
