@@ -4,7 +4,7 @@ const ImageCard = ({imgSrc}) => {
     
     return(
       
-          <img className="img-fluid" alt="hintimage" src={imgSrc}/>
+          <img className = "img-fluid" alt = "hintimage" src = {imgSrc} />
         
     )
 }

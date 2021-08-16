@@ -21,18 +21,20 @@ const [story,setStory] = useState('')
 
     const decideWhatToShow = (userPage) => {
        
-        if(userPage==='Intro'){
-            return  <Intro onClick={setUserPage}/>
-        }else if (userPage==="Background"){
-            return(
+        if(userPage === 'Intro') {
+            return ( 
+                <Intro onClick={setUserPage}/>
+            )
+        }else if (userPage === "Background"){
+            return (
                  <Background/>
             )
-        }else if ((userPage==="HintsWeapon") || (userPage==="HintsLocation") ||(userPage==="HintsName")){
-            return(
+        }else if ((userPage === "HintsWeapon") || (userPage === "HintsLocation") || (userPage === "HintsName")){
+            return (
                  <Hints story={story} userPage={userPage} setUserPage={setUserPage}/>
             )
-        }else if ((userPage==="SelectWeapon") || (userPage==="SelectLocation") ||(userPage==="SelectName")){
-            return(
+        }else if ((userPage === "SelectWeapon") || (userPage === "SelectLocation") || (userPage === "SelectName")){
+            return (
                  <UserSelection UserSelect={{}} story={story} userPage={userPage}/>
             )
         }
@@ -40,7 +42,7 @@ const [story,setStory] = useState('')
     
     return(
         <div >
-            {userPage!=="Intro"?<Nav userPage={userPage} setUserPage={setUserPage}/>:null}
+            {userPage !== "Intro" ? <Nav userPage = {userPage} setUserPage = {setUserPage} /> : null}
             
            {decideWhatToShow(userPage)}
         </div>
