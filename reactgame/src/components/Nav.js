@@ -34,7 +34,7 @@ const Nav = (props) => {
                 
             </ul>
             
-            <a class=" navbar-brand" href="http://localhost:3000/">RESET</a>
+            <a class=" navbar-brand" href="/">RESET</a>
           </nav>  
         </div>
     )
