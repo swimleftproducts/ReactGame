@@ -32,18 +32,3 @@ const Intro = (props) => {
 
 export default Intro
      
-<<<<<<< HEAD
-
-/*{ <div className="col align-self-center " style={{"width": "100%"}}>
-<img className="img-fluid" src="assets/2/glamdring.jpeg" alt='test'/>
-</div>
-<div className="col align-self-center justify-content-center" style={{"width": "100%"}}>
-<h1>Welcome Gamer!</h1>
-<button 
-    onClick={() => {
-    props.onClick('Background')
-    }}
-    className="btn btn-primary btn-lg ">Ready to play?</button>
-</div> }*/
-=======
->>>>>>> 530916c21b5233821b17adcab1891e215f7fdf54
