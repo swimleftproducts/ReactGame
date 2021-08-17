@@ -21,17 +21,17 @@ const Nav = (props) => {
         )
     })
     
-    // this part returns the background menu tabl hard coded and then the results of the renderDropdowns from up above
+    // this part returns the background menu tab hard coded and then the results of the renderDropdowns from up above
     return (
         <div >
-            <nav className = "navbar position-fixed">
+            <nav className = "navbar">
                 <ul className = "nav nav-tabs ">
                     <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Background"} value = {"Background"} />
                     {/* This is used to show all the drop down menus */}
                     {renderDropdowns}
                     <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Finalize"} value = {"Finalize"} />
                     <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Results"} value = {"Results"} />
-                    <button className="btn btn-outline-danger  "><a href = "http://localhost:3000/">RESET</a></button>
+                    <button className="btn btn-outline-danger  ms-auto" ><a className=""href = "http://localhost:3000/">RESET</a></button>
                 </ul>
                 
                 

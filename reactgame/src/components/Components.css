@@ -24,3 +24,14 @@
 background-image: url("http://www.dinpattern.com/tiles/afx-skyrim.gif");
 }
 
+nav ul {
+  width: 100% !important;
+}
+
+a {
+  text-decoration:none;
+}
+button a:hover,
+button .btn:hover{
+  color: #fff !important;
+}
