@@ -26,12 +26,79 @@ background-image: url("http://www.dinpattern.com/tiles/afx-skyrim.gif");
 
 nav ul {
   width: 100% !important;
+  margin-right: 1rem;
 }
 
 a {
   text-decoration:none;
 }
-button a:hover,
-button .btn:hover{
+
+button a:hover {
   color: #fff !important;
 }
+
+
+/* User-Selection Styles */
+
+.selection-btn {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.page-btn{
+  width: 5%;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(10px 10px 15px grey);
+  
+}
+
+.btn-L a {
+  width: 0;
+  height: 0;
+  border-top: 2rem solid transparent;
+  border-right: 2rem solid #6639E5;
+  border-bottom: 2rem solid transparent;
+}
+
+
+
+.btn-R a {
+  width: 0;
+  height: 0;
+  border-top: 2rem solid transparent;;
+  border-left: 2rem solid #6639E5;
+  border-bottom: 2rem solid transparent;
+}
+
+.selection-main-box {
+  width: 100vw;
+  margin-top: 1rem;
+}
+
+.selection-box {
+  width: 80%;
+  
+}
+
+.selection-card-text {
+  background-color: black !important;
+}
+
+.selection-card {
+  margin: 0 4rem 4rem;
+  filter: drop-shadow(10px 10px 15px grey);
+}
+
+
+
+
