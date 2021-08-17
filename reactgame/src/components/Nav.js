@@ -33,8 +33,6 @@ const Nav = (props) => {
                     <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Results"} value = {"Results"} />
                     <button className="btn btn-outline-danger  ms-auto" ><a className=""href = "http://localhost:3000/">RESET</a></button>
                 </ul>
-                
-                
           </nav>  
         </div>
     )

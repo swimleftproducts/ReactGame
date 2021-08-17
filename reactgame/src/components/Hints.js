@@ -1,44 +1,35 @@
-import React from 'react';
-import TextBox from './TextBox'
-import ImageCard from './ImageCard'
+import React, {useState} from 'react';
+import SmallCardDisplay from './SmallCardDisplay'
+import HintDetail from './HintDetail'
 
 const Hints = ({story,userPage,setUserPage}) => {
-    const hint = story[`${userPage}`]
-    const hint1 = story[`${userPage}1`]
-    const hint2 = story[`${userPage}2`]
+
+    const [detail,setDetail] = useState("")
+
+    
+    const placeholder = "asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa"      
+
    
     
-    const imgSrc= story.hintImage
-    console.log(imgSrc)
-
-    
-
-    //this section contains the logic of what to show next when the hint "onward" button is clicked. This stuff is hard coded which is bad. I think it should pull from the menu info to know what to do.
-    const nextClickHandler = () => {
-        switch(userPage){
-            case "HintsWeapon":
-                setUserPage("HintsName")
-            break;
-            case "HintsName":
-                  setUserPage("HintsLocation")
-            break;
-            case "HintsLocation":
-                setUserPage("SelectWeapon")
-            break;
-
-            default:
-                break;
-        }
-    }
-    
-    
     return (
-        <div className = "container" style = { {"height":"80vh"} }>
+        <div className="container" >
             <br></br>
             <br></br>
-            <ImageCard imgSrc = {imgSrc} />
-            <TextBox hint = {hint} hint1 = {hint1} hint2 = {hint2} nextClickHandler = {nextClickHandler} />
+            <SmallCardDisplay setDetail={setDetail} setUserPage={setUserPage}/>
+            
+            {detail===""?"":<HintDetail title={detail} content={placeholder}setDetail={setDetail} detail={detail}/>}
+             
+           
+            <div className="text-center" >
+                    <div className="">
+                    <br></br>
+                         <button className="btn btn-primary btn-lg " onClick={() => {setUserPage("SelectWeapon")}}> 
+                         Ready to make your selection?
+                        </button>
+                    </div>   
+            </div>
         </div>
+        
     )
 }
 
