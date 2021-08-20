@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import SelectionCard from './SelectionCard'
 
 class UserSelection extends Component {
-   
+    
     render() {
         return (
             <div>
@@ -19,47 +20,12 @@ class UserSelection extends Component {
                 
                 <div className="row justify-content-center selection-main-box">
                     <div className="row justify-content-between selection-box">
-                        <div className="card selection-card">
-                            <img src="./assets/2/weaponimages/1.jpeg" class="card-img-top" alt="..." />
-                            <div className="card-body selection-card-text justify-content-center align-items-center">
-                                <p className="card-text h1 text-white">The Gauntlet</p>
-                            </div>
-                        </div>
-
-                        <div className="card selection-card " style={{"width": "18rem"}}>
-                            <img src="./assets/2/weaponimages/2.jpeg" class="card-img-top" alt="..." />
-                            <div className="card-body selection-card-text ">
-                                <p className="card-text h1 text-white">The Gauntlet</p>
-                            </div>
-                        </div>
-
-                        <div className="card selection-card " style={{"width": "18rem"}}>
-                            <img src="./assets/2/weaponimages/3.jpeg" class="card-img-top" alt="..." />
-                            <div className="card-body selection-card-text">
-                                <p className="card-text h1 text-white">The Gauntlet</p>
-                            </div>
-                        </div>
-
-                        <div className="card selection-card " style={{"width": "18rem"}}>
-                            <img src="./assets/2/weaponimages/5.jpeg" class="card-img-top" alt="..." />
-                            <div className="card-body selection-card-text">
-                                <p className="card-text h1 text-white">The Gauntlet</p>
-                            </div>
-                        </div>
-
-                        <div className="card selection-card " style={{"width": "18rem"}}>
-                            <img src="./assets/2/weaponimages/6.jpeg" class="card-img-top" alt="..." />
-                            <div className="card-body selection-card-text">
-                                <p className="card-text h1 text-white">The Gauntlet</p>
-                            </div>
-                        </div>
-
-                        <div className="card selection-card " style={{"width": "18rem"}}>
-                            <img src="./assets/2/weaponimages/1.jpeg" class="card-img-top" alt="..." />
-                            <div className="card-body selection-card-text">
-                                <p className="card-text h1 text-white">The Gauntlet</p>
-                            </div>
-                        </div>
+                        <SelectionCard/>
+                        <SelectionCard/>
+                        <SelectionCard/>
+                        <SelectionCard/>
+                        <SelectionCard/>
+                        <SelectionCard/>
                     </div>
                 </div>
             </div>
@@ -68,3 +34,13 @@ class UserSelection extends Component {
 }
 
 export default UserSelection
+
+// const listOfImages = gameSetUp.stories.images
+// const SelectionCard = () => {
+//     // let SelectionItemBox = []
+//     for (let i = 0; i < 5; i++) {(
+//         <div>
+//             Hello World
+//         </div>)
+//     }
+// }
