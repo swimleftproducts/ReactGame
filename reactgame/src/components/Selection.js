@@ -21,11 +21,6 @@ class UserSelection extends Component {
                 <div className="row justify-content-center selection-main-box">
                     <div className="row justify-content-between selection-box">
                         <SelectionCard/>
-                        <SelectionCard/>
-                        <SelectionCard/>
-                        <SelectionCard/>
-                        <SelectionCard/>
-                        <SelectionCard/>
                     </div>
                 </div>
             </div>
