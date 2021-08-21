@@ -6,7 +6,7 @@ const SelectionImages = [];
 //gameSetup.stories[ *current stroy used* ].images.(weapon/name/location).id
 const SelectionIds = [];
 
-//a for loop that picks each item from SelectionImages and SelectionIds and return as a set in a <div> to be rendered as a bootstrap card
+//a for loop that picks each item from SelectionImages and SelectionIds (depending on the current userPage) and return as a set in a <div> to be rendered as a bootstrap card
 
 
 class SelectionCard extends Component {
