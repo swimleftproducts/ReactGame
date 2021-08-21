@@ -1,0 +1,127 @@
+.introButton {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+}
+
+.textbox {
+  position: absolute;
+
+  top: 40vh;
+  right: 10vw;
+  width: 400px;
+  height: 200px;
+}
+
+.center-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-bg{
+background-image: url("http://www.dinpattern.com/tiles/afx-skyrim.gif");
+}
+
+nav ul {
+  width: 100% !important;
+  margin-right: 1rem;
+}
+
+a {
+  text-decoration:none;
+}
+
+button a:hover {
+  color: #fff !important;
+}
+
+
+/* User-Selection Styles */
+
+.selection-btn {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.page-btn{
+  width: 5%;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(10px 10px 15px grey);
+  
+}
+
+.btn-L button {
+  width: 0;
+  height: 0;
+  border-top: 2rem solid transparent;
+  border-right: 3rem solid #6639E5;
+  border-bottom: 2rem solid transparent;
+  border-left: 0;
+}
+
+
+
+.btn-R button {
+  width: 0;
+  height: 0;
+  border-top: 2rem solid transparent;
+  border-left: 3rem solid #6639E5;
+  border-bottom: 2rem solid transparent;
+  border-right: 0;
+}
+
+.selection-main-box {
+  width: 100vw;
+  margin-top: 1rem;
+}
+
+.selection-box {
+  width: 80%;
+  
+}
+
+.selection-card-text {
+  background-color: black !important;
+}
+
+.selection-card {
+  margin: 0 4rem 4rem;
+  width: 16rem !important;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.selection-card img {
+  width: 100%;
+  height: 60%;
+}
+
+.card {
+  filter: drop-shadow(10px 10px 15px rgb(173, 173, 173));
+}
+
+.card-text {
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
