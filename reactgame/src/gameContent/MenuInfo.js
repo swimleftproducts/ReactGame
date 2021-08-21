@@ -11,7 +11,7 @@ const MenuInfo = [
         value: "HintsName"
         },
         {
-        label: "Weapon",    
+        label: "Location",    
         value: "HintsLocation"
         } 
         
@@ -29,7 +29,7 @@ const MenuInfo = [
         value: "SelectName"
         },
         {
-        label: "Weapon",    
+        label: "Location",    
         value: "SelectLocation"
         }
     ]
