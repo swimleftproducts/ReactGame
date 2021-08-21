@@ -10,11 +10,11 @@ class UserSelection extends Component {
                 {this.props.userPage}
                 {/* trying to layout using bootstrap for the content... */}
                 <div className="selection-btn">
-                    <div className="page-btn btn-L">
-                        <a></a>
+                    <div className="page-btn btn-L" >
+                        <button onClick={this.onClickChange}></button>
                     </div>
-                    <div className="page-btn btn-R">
-                        <a></a>
+                    <div className="page-btn btn-R" onChange={this.onClickChange}>
+                        <button onClick={this.onClickChange}></button>
                     </div>
                 </div>
                 
@@ -26,16 +26,14 @@ class UserSelection extends Component {
             </div>
         )
     }
+
+    onClickChange(event) {
+        // if currentPage is Weapon and btn-L is clicked || currentPage is Name and btn-R is clicked, render Location
+        console.log("testing")
+        // else if currentPage is Location and btn-L is clicked || currentPage is Weapon and btn-R is clicked, render Name
+
+        //else if currentPage is Name and btn-L is clicked || currentPage is Location and btn-R is clicked, render Weapon
+    }
 }
 
 export default UserSelection
-
-// const listOfImages = gameSetUp.stories.images
-// const SelectionCard = () => {
-//     // let SelectionItemBox = []
-//     for (let i = 0; i < 5; i++) {(
-//         <div>
-//             Hello World
-//         </div>)
-//     }
-// }

@@ -62,22 +62,24 @@ button a:hover {
   
 }
 
-.btn-L a {
+.btn-L button {
   width: 0;
   height: 0;
   border-top: 2rem solid transparent;
-  border-right: 2rem solid #6639E5;
+  border-right: 3rem solid #6639E5;
   border-bottom: 2rem solid transparent;
+  border-left: 0;
 }
 
 
 
-.btn-R a {
+.btn-R button {
   width: 0;
   height: 0;
-  border-top: 2rem solid transparent;;
-  border-left: 2rem solid #6639E5;
+  border-top: 2rem solid transparent;
+  border-left: 3rem solid #6639E5;
   border-bottom: 2rem solid transparent;
+  border-right: 0;
 }
 
 .selection-main-box {
