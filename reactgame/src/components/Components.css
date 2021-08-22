@@ -37,6 +37,17 @@ button a:hover {
   color: #fff !important;
 }
 
+/* SmallCardDisplay Styles */
+/* h means horizontal */
+.h-centering {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.hints-card-container {
+  width: 100%;
+}
 
 /* User-Selection Styles */
 
@@ -123,5 +134,8 @@ button a:hover {
   justify-content: center;
   align-items: center;
 }
+
+
+
 
 
