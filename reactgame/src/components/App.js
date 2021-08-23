@@ -4,16 +4,21 @@ import Nav from './Nav'
 import Hints from './Hints'
 import Background from './Background'
 import gameSetUp from '../gameContent/Storylines';
-import UserSelection from './Selection';
+import Selection from './Selection';
 
 const App = () => {
-
+//this is for setting the page that is shown
 const [userPage,setUserPage] = useState('Intro')
+
+// this is for story we are playing
 const [story,setStory] = useState('')
+//this is for setting user selection
+const [userChoice, setUserChoice]= useState(["weapon","name","location"])
    
     useEffect(() => {
         const newStory = gameSetUp.choose()
         setStory(newStory)
+        
        
     },[])
 
@@ -35,16 +40,17 @@ const [story,setStory] = useState('')
             )
         }else if ((userPage === "SelectWeapon") || (userPage === "SelectLocation") || (userPage === "SelectName")){
             return (
-                 <UserSelection UserSelect={{}} story={story} userPage={userPage}/>
+                 <Selection userChoice={userChoice} setUserChoice={setUserChoice} story={story} userPage={userPage}/>
             )
         }
     }
     
     return(
         <div >
+           
             {userPage !== "Intro" ? <Nav userPage = {userPage} setUserPage = {setUserPage} /> : null}
             
-           {decideWhatToShow(userPage)}
+            {decideWhatToShow(userPage)}
         </div>
 
     )

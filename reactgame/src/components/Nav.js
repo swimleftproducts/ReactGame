@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Dropdown from './navComponents/Dropdown'
 import BasicTab from './navComponents/BasicTab'
 import MenuInfo from '../gameContent/MenuInfo'
-import "./Components.css"
+
 
 const Nav = (props) => {
     const [selectedMenu, setSelectedMenu] = useState('')

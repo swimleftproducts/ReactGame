@@ -37,6 +37,17 @@ button a:hover {
   color: #fff !important;
 }
 
+/* SmallCardDisplay Styles */
+/* h means horizontal */
+.h-centering {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.hints-card-container {
+  width: 100%;
+}
 
 /* User-Selection Styles */
 
@@ -44,10 +55,8 @@ button a:hover {
   height: 80%;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   position: fixed;
-  padding: 0 1rem;
-  margin-top: 1rem;
 }
 
 .page-btn{
@@ -59,27 +68,15 @@ button a:hover {
   justify-content: center;
   align-items: center;
   filter: drop-shadow(10px 10px 15px grey);
-  
-}
-
-.btn-L button {
-  width: 0;
-  height: 0;
-  border-top: 2rem solid transparent;
-  border-right: 3rem solid #6639E5;
-  border-bottom: 2rem solid transparent;
-  border-left: 0;
 }
 
 
+.btn-L {
+  margin-right: 50rem;
+}
 
-.btn-R button {
-  width: 0;
-  height: 0;
-  border-top: 2rem solid transparent;
-  border-left: 3rem solid #6639E5;
-  border-bottom: 2rem solid transparent;
-  border-right: 0;
+.btn-R {
+  margin-left: 50rem;
 }
 
 .selection-main-box {
@@ -123,5 +120,4 @@ button a:hover {
   justify-content: center;
   align-items: center;
 }
-
 
