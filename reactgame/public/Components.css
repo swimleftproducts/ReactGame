@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .introButton {
   position: absolute;
   top: 50vh;
@@ -26,7 +32,6 @@ background-image: url("http://www.dinpattern.com/tiles/afx-skyrim.gif");
 
 nav ul {
   width: 100% !important;
-  margin-right: 1rem;
 }
 
 a {
@@ -55,8 +60,14 @@ button a:hover {
   height: 80%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: 1rem;
   position: fixed;
+  /* This centers containers that ignores its parent container */
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .page-btn{
@@ -68,15 +79,16 @@ button a:hover {
   justify-content: center;
   align-items: center;
   filter: drop-shadow(10px 10px 15px grey);
+  cursor: pointer;
 }
 
 
 .btn-L {
-  margin-right: 50rem;
+  margin-left: 1rem;
 }
 
 .btn-R {
-  margin-left: 50rem;
+  margin-right: 1rem;
 }
 
 .selection-main-box {
@@ -86,7 +98,7 @@ button a:hover {
 
 .selection-box {
   width: 80%;
-  
+  cursor: pointer;
 }
 
 .selection-card-text {
