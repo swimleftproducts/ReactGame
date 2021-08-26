@@ -5,6 +5,7 @@ import Hints from './Hints'
 import Background from './Background'
 import gameSetUp from '../gameContent/Storylines';
 import Selection from './Selection';
+import Results from './Results'
 
 const App = () => {
 //this is for setting the page that is shown
@@ -41,6 +42,10 @@ const [userChoice, setUserChoice]= useState(["weapon","name","location"])
         }else if ((userPage === "SelectWeapon") || (userPage === "SelectLocation") || (userPage === "SelectName")){
             return (
                  <Selection userChoice={userChoice} setUserChoice={setUserChoice} story={story} userPage={userPage}/>
+            )
+        }else if ((userPage === "Results")){
+            return (
+                <Results/>
             )
         }
     }
