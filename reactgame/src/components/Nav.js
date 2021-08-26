@@ -31,7 +31,7 @@ const Nav = (props) => {
                     {renderDropdowns}
                     <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Finalize"} value = {"Finalize"} />
                     <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Results"} value = {"Results"} />
-                    <li className="nav-item ms-auto" style = { {"margin-right": "1rem"} }><button className="btn btn-outline-danger" ><a href = "http://localhost:3000/">Reset</a></button></li>
+                    <li className="nav-item ms-auto"><button className="btn btn-outline-danger" ><a href = "http://localhost:3000/">Reset</a></button></li>
                 </ul>
           </nav>  
         </div>
