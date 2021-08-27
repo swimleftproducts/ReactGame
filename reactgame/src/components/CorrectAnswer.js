@@ -1,9 +1,9 @@
 import React from 'react';
 
-const correctAnswer = (props) => {
+const correctAnswer = () => {
     return (
         <li className="card">
-            <div>
+            <div className="card-img-top">
                 <img src={this.props.imgSrc} className="card-img-top" alt="..."/>
             </div>
             <div className="card-body">
