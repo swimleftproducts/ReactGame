@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const correctAnswer = () => {
-    return (
-        <li className="card">
-            <div className="card-img-top">
+class CorrectAnswer extends Component {
+    render() {
+        return (
+            <li>
                 <img src={this.props.imgSrc} className="card-img-top" alt="..."/>
-            </div>
-            <div className="card-body">
-                <p className="card-text h1">{this.props.text}</p>
-            </div>
-        </li>
-    )
+                <div className="card-body">
+                    <p className="card-text h1">{this.props.text}</p>
+                </div>
+            </li>
+        )
+    }
+    
 }
 
-export default correctAnswer
+export default CorrectAnswer
