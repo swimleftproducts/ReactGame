@@ -9,15 +9,17 @@ class Results extends Component {
         return (
             <div className="row justify-content-center selection-main-box">
                 <div className="row justify-content-center selection-box">
-                    <ul className="card row" style={{"width":"18rem"}}>
-                        <li>
-                            <div className="card-body">
-                                <p className="card-text h1">This is the correct answer</p>
-                            </div>
-                        </li>
-                        {this.renderResultCard()}
-                    </ul>
+                    <div className="">
+                        <p className="">This is the correct answer</p>
+                    </div>
+                    {this.renderResultCard()}
                 </div> 
+                <div className="row justify-content-center selection-box">
+                    {this.renderResultCard()}
+                    <div>
+                        <p className="">This is your choice</p>
+                    </div>c
+                </div>
             </div>
         )
     }
