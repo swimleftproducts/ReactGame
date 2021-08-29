@@ -4,6 +4,10 @@ body {
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 .introButton {
   position: absolute;
   top: 50vh;
@@ -132,4 +136,5 @@ button a:hover {
   justify-content: center;
   align-items: center;
 }
+
 

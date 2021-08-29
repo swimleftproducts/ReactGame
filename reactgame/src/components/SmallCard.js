@@ -5,7 +5,7 @@ const SmallCard = ({Title,Text,onClick}) => {
     return (
 
         <div onClick={() => { onClick()}} className="card" style={{"width":"18rem"}}>
-             <img src="/assets/2/glamdring.jpeg" class="card-img-top" alt="..."/>
+             <img src="/assets/2/glamdring.jpeg" className="card-img-top" alt="..."/>
              <div className="card-body">
                  <h5 className="card-title">{Title}</h5>
                 <p className="card-text">{Text}</p>
