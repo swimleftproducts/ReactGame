@@ -2,6 +2,7 @@ import React from 'react';
 
 const HintDetail = ({detail, setDetail,title,content}) => {
     
+    
     return (
         <div className="container-fluid  gx-5">
             <div onClick={() => {setDetail("")}} className="row justify-content-center align-items-center" style={{"border":"grey solid 5px"}}>

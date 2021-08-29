@@ -1,10 +1,15 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import SmallCardDisplay from './SmallCardDisplay'
 import HintDetail from './HintDetail'
 
-const Hints = ({story,userPage,setUserPage}) => {
+const Hints = (props) => {
+
+    const {story,userPage,setUserPage}=props
+    
 
     const [detail,setDetail] = useState("")
+
+
 
     
     const placeholder = "asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa"      
@@ -17,7 +22,7 @@ const Hints = ({story,userPage,setUserPage}) => {
             <br></br>
             <SmallCardDisplay setDetail={setDetail} setUserPage={setUserPage}/>
             
-            {detail===""?"":<HintDetail title={detail} content={placeholder}setDetail={setDetail} detail={detail}/>}
+            {detail===""?"":<HintDetail title={detail} content={placeholder} setDetail={setDetail} detail={detail}/>}
              
            
             <div className="text-center" >
