@@ -1,0 +1,59 @@
+.eh-height-nav {
+  background-color: blueviolet;
+  height: 150px;
+}
+
+.eh-intro {
+  height: 100vh;
+}
+
+.eh-intro-img {
+  background-color: rgb(34, 10, 10);
+  height: 300px;
+  width: 300px;
+  color: blanchedalmond;
+}
+.eh-intro-text {
+  background-color: rgb(21, 218, 218);
+  height: 300px;
+  width: 300px;
+  color: blanchedalmond;
+}
+
+.eh-intro-col {
+  height: 70vh;
+}
+
+.onehundred {
+  height: 100%;
+}
+
+.t-border-1 {
+  border: 2px dotted blue;
+}
+.t-border-2 {
+  border: 10px dotted red;
+}
+.t-border-3 {
+  border: 2px dotted green;
+}
+.t-border-4 {
+  border: 2px dotted purple;
+}
+.t-border-5 {
+  border: 2px dotted yellow;
+}
+
+.card {
+  border-radius: 1rem;
+  filter: drop-shadow(1rem 1rem 1rem #a8a9aa);
+  margin: 10px 10px 10px 0;
+  padding: 0;
+  overflow: hidden;
+  width: 300px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+}
