@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Dropdown from './navComponents/Dropdown'
 import BasicTab from './navComponents/BasicTab'
 import MenuInfo from '../gameContent/MenuInfo'
-import "./Components.css"
+
 
 const Nav = (props) => {
     const [selectedMenu, setSelectedMenu] = useState('')
@@ -21,20 +21,18 @@ const Nav = (props) => {
         )
     })
     
-    // this part returns the background menu tabl hard coded and then the results of the renderDropdowns from up above
+    // this part returns the background menu tab hard coded and then the results of the renderDropdowns from up above
     return (
         <div >
-            <nav className = "navbar  ">
-            <ul className = "nav nav-tabs ">
-                <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Background"} value = {"Background"} />
-                {/* This is used to show all the drop down menus */}
-                {renderDropdowns}
-                <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Finalize"} value = {"Finalize"} />
-                <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Results"} value = {"Results"} />
-                
-            </ul>
-            
-            <a class=" navbar-brand" href="/">RESET</a>
+            <nav className = "navbar">
+                <ul className = "nav nav-tabs ">
+                    <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Background"} value = {"Background"} />
+                    {/* This is used to show all the drop down menus */}
+                    {renderDropdowns}
+                    <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Finalize"} value = {"Finalize"} />
+                    <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Results"} value = {"Results"} />
+                    <li className="nav-item ms-auto" style = { {"margin-right": "1rem"} }><button className="btn btn-outline-danger" ><a href = "http://localhost:3000/">Reset</a></button></li>
+                </ul>
           </nav>  
         </div>
     )

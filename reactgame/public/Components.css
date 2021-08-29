@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.introButton {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+}
+
+.textbox {
+  position: absolute;
+
+  top: 40vh;
+  right: 10vw;
+  width: 400px;
+  height: 200px;
+}
+
+.center-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-bg{
+background-image: url("http://www.dinpattern.com/tiles/afx-skyrim.gif");
+}
+
+nav ul {
+  width: 100% !important;
+}
+
+a {
+  text-decoration:none;
+}
+
+button a:hover {
+  color: #fff !important;
+}
+
+/* SmallCardDisplay Styles */
+/* h means horizontal */
+.h-centering {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.hints-card-container {
+  width: 100%;
+}
+
+/* User-Selection Styles */
+
+.selection-btn {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  position: fixed;
+  /* This centers containers that ignores its parent container */
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-btn{
+  width: 5%;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(10px 10px 15px grey);
+  cursor: pointer;
+}
+
+
+.btn-L {
+  margin-left: 1rem;
+}
+
+.btn-R {
+  margin-right: 1rem;
+}
+
+.selection-main-box {
+  width: 100vw;
+  margin-top: 1rem;
+}
+
+.selection-box {
+  width: 80%;
+  cursor: pointer;
+}
+
+.selection-card-text {
+  background-color: black !important;
+}
+
+.selection-card {
+  margin: 0 4rem 4rem;
+  width: 16rem !important;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.selection-card img {
+  width: 100%;
+  height: 60%;
+}
+
+.card {
+  filter: drop-shadow(10px 10px 15px rgb(173, 173, 173));
+}
+
+.card-text {
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

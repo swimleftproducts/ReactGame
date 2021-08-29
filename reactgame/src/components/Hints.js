@@ -12,7 +12,7 @@ const Hints = ({story,userPage,setUserPage}) => {
    
     
     return (
-        <div className="container" >
+        <div className="container justify-content-center" >
             <br></br>
             <br></br>
             <SmallCardDisplay setDetail={setDetail} setUserPage={setUserPage}/>
