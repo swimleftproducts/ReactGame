@@ -92,7 +92,6 @@ button {
 .glass-container button {
   filter: drop-shadow(0px 8px 5px grey);
   font-size: 2rem;
-  background-color: rgb(13, 93, 185);
   border: none;
 }
 
