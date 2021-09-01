@@ -69,6 +69,7 @@ button {
 
 .glass {
   height: 80vh;
+  width: 80%;
   background: white;
   background: linear-gradient(
     to right bottom, 
@@ -76,9 +77,11 @@ button {
     rgba(235, 235, 235, 0.7)
   );
   backdrop-filter: blur(0.3rem);
+  border-radius: 1rem;
 }
 
 .intro-bg {
+  background-color: grey;
   background-image: url("http://www.dinpattern.com/tiles/afx-skyrim.gif");
   height: 100vh;
 }
@@ -87,16 +90,22 @@ button {
   width: 35%;
   text-align: center;
   margin-bottom: 1rem;
+  border: 1px solid green;
+  margin: 2rem;
 }
 
 .glass-container button {
   filter: drop-shadow(0px 8px 5px grey);
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: none;
 }
 
+.glass-container img {
+  border-radius: 1rem;
+}
+
 .glass-container h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 /* This is a short way to make flex-justify-center & Flex-align-center  */
@@ -105,4 +114,34 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Results.js */
+.results {
+  background: linear-gradient(
+    to right bottom, 
+    rgba(72, 241, 188, 0.7), 
+    rgba(180, 81, 238, 0.5)
+  );
+  height: 100vh;
+}
+
+.correct-answer, 
+.user-choice {
+  background: linear-gradient(
+    to right bottom, 
+    rgba(255, 255, 255, 0.5), 
+    rgba(235, 235, 235, 0.7)
+  );
+  height: 45%;
+  border: 1px grey solid
+}
+
+.c-left-box {
+  height:100%;
+  background-color: green;
+}
+
+.c-right-box {
+  height:100%;
 }
