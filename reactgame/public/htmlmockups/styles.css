@@ -145,3 +145,26 @@ button {
 .c-right-box {
   height:100%;
 }
+
+/* this is for the background detail page */
+
+.eh-position {
+  margin-left: -20vw;
+}
+@media screen and (max-width:768px) {
+  .eh-position {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width:1200px) {
+  .eh-position {
+    margin-left: -18vh;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .card-eh {
+    width:100%
+  }
+}
+
