@@ -89,9 +89,7 @@ button {
 .glass-container {
   width: 35%;
   text-align: center;
-  margin-bottom: 1rem;
-  border: 1px solid green;
-  margin: 2rem;
+  margin: 1rem 2rem;
 }
 
 .glass-container button {
@@ -134,16 +132,20 @@ button {
     rgba(235, 235, 235, 0.7)
   );
   height: 45%;
-  border: 1px grey solid
+  border: 1px grey solid;
 }
 
 .c-left-box {
   height:100%;
-  background-color: green;
+  width: 30%;
 }
 
 .c-right-box {
   height:100%;
+  width: 60%;
+}
+.c-right-box .card {
+  width: 15rem !important;
 }
 
 /* this is for the background detail page */
