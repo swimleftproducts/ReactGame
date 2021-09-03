@@ -121,31 +121,33 @@ button {
     rgba(72, 241, 188, 0.7), 
     rgba(180, 81, 238, 0.5)
   );
+  background-size: cover;
   height: 100vh;
 }
 
-.correct-answer, 
-.user-choice {
+.correct-answer {
   background: linear-gradient(
     to right bottom, 
     rgba(255, 255, 255, 0.5), 
     rgba(235, 235, 235, 0.7)
   );
-  height: 45%;
+  width: 100%;
   border: 1px grey solid;
 }
 
 .c-left-box {
-  height:100%;
-  width: 30%;
+  height:25rem;
+  width: 25rem;
+  background-color: rgba(72, 241, 188, 0.7);
 }
 
 .c-right-box {
-  height:100%;
   width: 60%;
 }
 .c-right-box .card {
   width: 15rem !important;
+  height: 25rem;
+  border-radius: 1rem;
 }
 
 /* this is for the background detail page */
