@@ -29,7 +29,7 @@ const [userChoice, setUserChoice]= useState(["weapon","name","location"])
        
         if(userPage === 'Intro') {
             return ( 
-                <Intro onClick={setUserPage}/>
+                <Intro setUserPage={setUserPage}/>
             )
         }else if (userPage === "Background"){
             return (
@@ -49,7 +49,7 @@ const [userChoice, setUserChoice]= useState(["weapon","name","location"])
             )
         }
     }
-    
+   
     return(
         <div >
            

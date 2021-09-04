@@ -133,11 +133,12 @@ button {
   );
   width: 100%;
   border: 1px grey solid;
+  height: 25rem;
 }
 
 .c-left-box {
-  height:25rem;
-  width: 25rem;
+  height: 100%;
+  width: 35%;
   background-color: rgba(72, 241, 188, 0.7);
 }
 
@@ -146,7 +147,7 @@ button {
 }
 .c-right-box .card {
   width: 15rem !important;
-  height: 25rem;
+  height: 23.5rem;
   border-radius: 1rem;
 }
 
