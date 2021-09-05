@@ -64,7 +64,6 @@ button {
   padding: 0;
 }
 
-
 /* Intro.js */
 
 .glass {
@@ -72,8 +71,8 @@ button {
   width: 80%;
   background: white;
   background: linear-gradient(
-    to right bottom, 
-    rgba(255, 255, 255, 0.5), 
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
     rgba(235, 235, 235, 0.7)
   );
   backdrop-filter: blur(0.3rem);
@@ -82,7 +81,7 @@ button {
 
 .intro-bg {
   background-color: grey;
-  background-image: url("http://www.dinpattern.com/tiles/afx-skyrim.gif");
+  background-image: url('http://www.dinpattern.com/tiles/afx-skyrim.gif');
   height: 100vh;
 }
 
@@ -116,48 +115,53 @@ button {
 
 /* Results.js */
 .results {
-  background: linear-gradient(
-    to right bottom, 
-    rgba(72, 241, 188, 0.7), 
-    rgba(180, 81, 238, 0.5)
-  );
+  background-image: url('assets/2/hintimage.jpeg');
   background-size: cover;
   /* margin: auto;
   width: 50%; */
   display: flex;
   justify-content: center;
-
 }
 
-.box1 {
-  border: 2px dotted grey;
-  height: 60vh;
+.box {
+  height: 45vh;
   /* This hides the scrollbar but keeps functionality */
   overflow: scroll;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-.box1::-webkit-scrollbar {
+.box::-webkit-scrollbar {
   display: none;
 }
 
 .result-card {
-  height: 60%;
+  height: 80%;
+  margin: 5px 0 !important;
+  width: 15rem !important;
+  filter: none;
+}
+
+.result-card img {
+  height: 65%;
 }
 
 .container-box {
-    height: auto;
-    text-align: center;
-    border: 3px solid grey;
-    font-size: 3rem;
+  height: auto;
+  text-align: center;
+  border: 3px solid grey;
+  font-size: 2rem;
+  color: white;
 }
 
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
   .box1 {
     overflow: scroll;
   }
- }
+  .container-box {
+    background-color: black;
+  }
+}
 
 /* .correct-answer {
   background: linear-gradient(
@@ -190,20 +194,19 @@ button {
 .eh-position {
   margin-left: -20vw;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .eh-position {
     margin-left: 0;
   }
 }
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
   .eh-position {
     margin-left: -18vh;
   }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .card-eh {
-    width:100%
+    width: 100%;
   }
 }
-

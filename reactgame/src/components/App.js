@@ -7,6 +7,23 @@ import gameSetUp from '../gameContent/Storylines';
 import Selection from './Selection';
 import Results from './Results'
 
+
+
+const correctResults = [
+    {imgSrc:"./assets/2/nazgul.jpeg",
+     text:"Nazgul",
+     id:"nazgul"
+    },
+    {imgSrc:"./assets/2/glamdring.jpeg",
+     text:"Glamdring",
+     id: "glamdring"
+    },
+    {imgSrc:"./assets/2/hobbiton.jpeg",
+     text:"Hobbiton",
+     id:"hobbiton"
+    }
+];
+
 const App = () => {
 //this is for setting the page that is shown
 const [userPage,setUserPage] = useState('Intro')
@@ -14,7 +31,20 @@ const [userPage,setUserPage] = useState('Intro')
 // this is for story we are playing
 const [story,setStory] = useState('')
 //this is for setting user selection
-const [userChoice, setUserChoice]= useState(["weapon","name","location"])
+const [userChoice, setUserChoice]= useState([
+    {imgSrc:"./assets/2/nazgul.jpeg",
+     text:"Nazgul",
+     id:"nazgul"
+    },
+    {imgSrc:"./assets/2/glamdring.jpeg",
+     text:"Glamdring",
+     id: "glamdring"
+    },
+    {imgSrc:"./assets/2/hobbiton.jpeg",
+     text:"Hobbiton",
+     id:"hobbiton"
+    }
+])
    
     useEffect(() => {
         const newStory = gameSetUp.choose()
@@ -45,7 +75,7 @@ const [userChoice, setUserChoice]= useState(["weapon","name","location"])
             )
         }else if ((userPage === "Results")){
             return (
-                <Results/>
+                <Results userChoice={userChoice} correctResults={correctResults} />
             )
         }
     }

@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css" type="text/css">
-    <link rel="stylesheet" href="../bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" type="text/css" />
+    <link rel="stylesheet" href="../bootstrap.min.css" />
     <title>Results</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="results p-5 row">
-        <div class="container-fluid row align-items-center justify-content-around  box1">
-            <div class="container-box col-xl-3 col-lg-12 col-md-12 col-sm-12 sticky-top">Some Text Text Text</div>
-            <div class="card result-card col-xl-2 col-lg-3 col-md-4 col-sm-7"></div>
-            <div class="card result-card col-xl-2 col-lg-3 col-md-4 col-sm-7"></div>
-            <div class="card result-card col-xl-2 col-lg-3 col-md-4 col-sm-7"></div>
-        </div>
-        <div class="container-fluid row align-items-center justify-content-around  box1">
-            <div class="card result-card col-xl-2 col-lg-3 col-md-4 col-sm-7 order-lg-1 order-md-2 order-sm-2 order-xs-2"></div>
-            <div class="card result-card col-xl-2 col-lg-3 col-md-4 col-sm-7 order-lg-2 order-md-3 order-sm-3 order-xs-3"></div>
-            <div class="card result-card col-xl-2 col-lg-3 col-md-4 col-sm-7 order-lg-3 order-md-4 order-sm-4 order-xs-4"></div>
-            <div class="container-box col-xl-3 col-lg-12 col-md-12 col-sm-12 sticky-top order-lg-4 order-md-1 order-sm-1 order-xs-1">Some Text Text Text</div>
-        </div>
-        <!-- <div class="correct-answer d-flex flex-row justify-content-evenly " >
-            <div class="row c-right-box justify-content-evenly ">
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-            </div>
-            <div class="c-left-box "></div>
-        </div> -->
+      <div class="container-fluid row align-items-center justify-content-around box1">
+        <div class="container-box col-xl-3 col-lg-12 col-md-12 col-sm-12 sticky-top">Some Text Text Text</div>
+        <div class="card result-card col-xl-2 col-lg-3 col-md-3 col-sm-7"></div>
+        <div class="card result-card col-xl-2 col-lg-3 col-md-3 col-sm-7"></div>
+        <div class="card result-card col-xl-2 col-lg-3 col-md-3 col-sm-7"></div>
+      </div>
+      <div class="container-fluid row flex-row-reverse align-items-center justify-content-around box1">
+        <div class="container-box col-xl-3 col-lg-12 col-md-12 col-sm-12
+sticky-top">Some Text Text Text</div>
+        <div class="card result-card col-xl-2col-lg-3 col-md-3 col-sm-7">weapon</div>
+        <div class="card result-card col-xl-2 col-lg-3 col-md-3 col-sm-7">name</div>
+        <div class="card result-card col-xl-2 col-lg-3 col-md-3 col-sm-7">location</div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
 
 <!--
-    container
-     row
-       col-12  col-med-12
-        color box w/ text  style:100%
-       col-12 col-med-4
-        card width=300px
-       col-12 col-med-4
-        card
-       col-12 col-med-4
-        card
+  <UserResults userChoice={props.userchoice} story={props.story}/>
+  <UserResults userChoice={props.userchoice} story={props.story.answer}/> 
 
+    
+       -->
+<!--
+// some logic to get image source and text and title from userchoice from story
+---User REsults COmponent {
+[{name: gladring
+  src: /assets/weapons/gladring
+},
+{name: gladring
+  src: /assets/weapons/gladring
+}
+,
+{name: gladring
+  src: /assets/weapons/gladring
+}
+]
 
+ <div> Text<div>
+<ResultsCard text={text} title={weapon} imgSrc={"./assets/img/img1"}
+<ResultsCard text={text} title={name} imgSrc={"./assets/img/img1"} 
+<ResultsCard text={text} title={location} imgSrc={"./assets/img/img1"}       
 
-        </div> -->
+ }
+       -->
