@@ -144,7 +144,7 @@ button {
 .background-card {
   height: 400px;
   margin: 5px  !important;
-  width: 15rem !important;
+  width: 20rem !important;
  
 }
 
@@ -152,7 +152,7 @@ button {
   height: 65%;
 }
 .background-card img {
-  height: 60% !important;
+  height: 65% !important;
 }
 
 .container-box {

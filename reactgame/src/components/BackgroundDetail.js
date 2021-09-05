@@ -23,7 +23,9 @@ class BackgroundDetail extends Component {
 
                        </div>
                        <div  className="p-0 row  text-center">
-                            <button className="col-12 p-1 m-0 btn btn-block btn-primary btn-lg  ">Hints</button>
+                            <button onClick={() => {
+                                this.props.setUserPage('HintsWeapon')
+                            }}className="col-12 p-1 m-0 btn btn-block btn-primary btn-lg  ">Hints</button>
                        </div>
                     </div>
                 </div>

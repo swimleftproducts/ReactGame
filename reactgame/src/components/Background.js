@@ -6,30 +6,30 @@ import BackgroundDetail from './BackgroundDetail';
 const backgroundInfo = [
      {imgSrc:"./assets/2/nazgul.jpeg",
       text:"Porem ipsum dolor sit amet, consectetur adipiscing elit. Quacumque enim ingredimur, in aliqua historia vestigium ponimus.",
-      teaser:"Porem ipsum dolor sit amet",
+      teaser:"Porem ipsum dolor sit amet...",
       id:"Background1"
      },
      {imgSrc:"./assets/2/glamdring.jpeg",
       text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quacumque enim ingredimur, in aliqua historia vestigium ponimus.",
-      teaser:"Porem ipsum dolor sit amet",
+      teaser:"Porem ipsum dolor sit amet...",
       id: "Background2"
      },
      {imgSrc:"./assets/2/hobbiton.jpeg",
       text:"Horem ipsum dolor sit amet, consectetur adipiscing elit. Quacumque enim ingredimur, in aliqua historia vestigium ponimus.",
-      teaser:"Porem ipsum dolor sit amet",
+      teaser:"Porem ipsum dolor sit amet...",
       id:"Background3"
      }
  ]
 
 
 
-const Background = () => {
+const Background = (props) => {
      const [displayDetail,setDisplayDetail] = useState("")
 
     const renderBackgroundCard=(backgroundInfo)=>{
           const listOfCards = backgroundInfo.map((card) => {
               return (
-                  <BackgroundCard displayDetail={displayDetail} onClick={setDisplayDetail} title={card.id} imgSrc={card.imgSrc} text={card.teaser} id={card.id} key={card.id}/>
+                  <BackgroundCard displayDetail={displayDetail} onClick={setDisplayDetail} title={card.id} imgSrc={card.imgSrc} text={card.teaser} id={card.id}  key={card.id}/>
               )
           });
   
@@ -38,11 +38,10 @@ const Background = () => {
      
       const renderBackgroundDetail=() => {
            if(displayDetail===""){
-                return <div> would not be showing {displayDetail}</div>
+                return 
            }else{
                const infoArray = pullInfo(displayDetail,backgroundInfo)
-               console.log(infoArray)
-                return <BackgroundDetail onClick={setDisplayDetail} title={infoArray.id} imgSrc={infoArray.imgSrc} text={infoArray.teaser} />
+               return <BackgroundDetail onClick={setDisplayDetail} title={infoArray.id} setUserPage={props.setUserPage} imgSrc={infoArray.imgSrc} text={infoArray.text} />
            }
       }
 
@@ -65,7 +64,9 @@ const Background = () => {
                         {renderBackgroundCard(backgroundInfo)}
                     </div>
                     <div class="row justify-content-around ">
-                         <button class="col-4 mt-5 btn btn-block btn-primary btn-lg  ">Hints</button>
+                         <button onClick={(params) => {
+                           props.setUserPage('HintsWeapon')   
+                         }} class="col-4 mt-5 btn btn-block btn-primary btn-lg  ">Hints</button>
                         
                     </div>
                </div>

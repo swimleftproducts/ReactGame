@@ -63,7 +63,7 @@ const [userChoice, setUserChoice]= useState([
             )
         }else if (userPage === "Background"){
             return (
-                 <Background/>
+                 <Background setUserPage={setUserPage}/>
             )
         }else if ((userPage === "HintsWeapon") || (userPage === "HintsLocation") || (userPage === "HintsName")){
             return (
