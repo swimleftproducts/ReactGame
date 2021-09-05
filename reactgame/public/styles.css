@@ -122,10 +122,44 @@ button {
     rgba(180, 81, 238, 0.5)
   );
   background-size: cover;
-  height: 100vh;
+  /* margin: auto;
+  width: 50%; */
+  display: flex;
+  justify-content: center;
+
 }
 
-.correct-answer {
+.box1 {
+  border: 2px dotted grey;
+  height: 60vh;
+  /* This hides the scrollbar but keeps functionality */
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.box1::-webkit-scrollbar {
+  display: none;
+}
+
+.result-card {
+  height: 60%;
+}
+
+.container-box {
+    height: auto;
+    text-align: center;
+    border: 3px solid grey;
+    font-size: 3rem;
+}
+
+@media (max-width: 576px) { 
+  .box1 {
+    overflow: scroll;
+  }
+ }
+
+/* .correct-answer {
   background: linear-gradient(
     to right bottom, 
     rgba(255, 255, 255, 0.5), 
@@ -149,7 +183,7 @@ button {
   width: 15rem !important;
   height: 23.5rem;
   border-radius: 1rem;
-}
+} */
 
 /* this is for the background detail page */
 
