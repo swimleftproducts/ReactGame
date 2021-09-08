@@ -172,32 +172,6 @@ button {
   }
 }
 
-/* .correct-answer {
-  background: linear-gradient(
-    to right bottom, 
-    rgba(255, 255, 255, 0.5), 
-    rgba(235, 235, 235, 0.7)
-  );
-  width: 100%;
-  border: 1px grey solid;
-  height: 25rem;
-}
-
-.c-left-box {
-  height: 100%;
-  width: 35%;
-  background-color: rgba(72, 241, 188, 0.7);
-}
-
-.c-right-box {
-  width: 60%;
-}
-.c-right-box .card {
-  width: 15rem !important;
-  height: 23.5rem;
-  border-radius: 1rem;
-} */
-
 /* this is for the background detail page */
 
 .eh-position {
@@ -218,4 +192,46 @@ button {
   .card-eh {
     width: 100%;
   }
+}
+
+/* Selection.js */
+.selection-page {
+  background:linear-gradient(
+    to right bottom,
+    rgba(110, 214, 233, 0.5),
+    rgba(221, 88, 203, 0.7)
+  );
+}
+
+.selection-box {
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.5),
+    rgba(235, 235, 235, 0.7)
+  );
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.selection-card {
+  height: 30rem !important;
+}
+
+.current-selection {
+  background: linear-gradient(
+    to left top,
+    rgba(193, 255, 207, 0.5),
+    rgba(165, 230, 122, 0.7)
+  );
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.current-selection .selection-card {
+  height: 18rem!important; 
+  margin: 0;
 }
