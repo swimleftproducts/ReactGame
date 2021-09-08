@@ -140,6 +140,7 @@ button {
   margin: 5px 0 !important;
   width: 15rem !important;
   filter: none;
+  border-radius: 0.7rem!important;
 }
 .background-card {
   height: 400px;
@@ -201,21 +202,24 @@ button {
     rgba(110, 214, 233, 0.5),
     rgba(221, 88, 203, 0.7)
   );
+  height: 94vh;
 }
 
 .selection-box {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to left top,
     rgba(255, 255, 255, 0.5),
     rgba(235, 235, 235, 0.7)
-  );
-  height: 100vh;
+  ); */
   justify-content: space-around;
   align-items: center;
+  display: flex;
 }
 
 .selection-card {
-  height: 30rem !important;
+  height: 20rem !important;
+  border-radius: 1rem !important;
+  margin: 0 0 2rem;
 }
 
 .current-selection {
@@ -224,7 +228,6 @@ button {
     rgba(193, 255, 207, 0.5),
     rgba(165, 230, 122, 0.7)
   );
-  height: 100vh;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -232,6 +235,6 @@ button {
 }
 
 .current-selection .selection-card {
-  height: 18rem!important; 
-  margin: 0;
+  height: 13rem!important; 
+  margin: 2rem 0;
 }
