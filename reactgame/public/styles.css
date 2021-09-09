@@ -165,7 +165,7 @@ button {
 }
 
 @media (max-width: 576px) {
-  .box1 {
+  .box {
     overflow: scroll;
   }
   .container-box {
@@ -203,6 +203,7 @@ button {
     rgba(221, 88, 203, 0.7)
   );
   height: 94vh;
+  margin: 0!important;
 }
 
 .selection-box {
@@ -219,7 +220,6 @@ button {
 .selection-card {
   height: 20rem !important;
   border-radius: 1rem !important;
-  margin: 0 0 2rem;
 }
 
 .current-selection {
@@ -231,10 +231,17 @@ button {
   display:flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+
 }
 
 .current-selection .selection-card {
-  height: 13rem!important; 
-  margin: 2rem 0;
+  height: 12rem!important; 
+  margin: 1rem 0!important;
+}
+
+@media (max-width: 400px) {
+  .current-selection {
+    flex-direction: row;
+  }
+
 }
