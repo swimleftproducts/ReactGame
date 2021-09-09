@@ -229,9 +229,8 @@ button {
     rgba(165, 230, 122, 0.7)
   );
   display:flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-
 }
 
 .current-selection .selection-card {
@@ -242,6 +241,17 @@ button {
 @media (max-width: 400px) {
   .current-selection {
     flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .current-selection .selection-card {
+    height: 6rem !important;
+    width: 6rem;
+    margin: 0.5rem!important;
+    
   }
 
 }
