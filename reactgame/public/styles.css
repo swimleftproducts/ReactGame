@@ -202,8 +202,14 @@ button {
     rgba(110, 214, 233, 0.5),
     rgba(221, 88, 203, 0.7)
   );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 94vh;
+  max-width: 1920px;
+  max-height: 1080px;
   margin: 0!important;
+  overflow: scroll;
 }
 
 .selection-box {
@@ -212,22 +218,30 @@ button {
     rgba(255, 255, 255, 0.5),
     rgba(235, 235, 235, 0.7)
   ); */
+  height: 100%;
   justify-content: space-around;
   align-items: center;
   display: flex;
+  overflow:scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.selection-box::-webkit-scrollbar {
+  display: none; 
+  
 }
 
 .selection-card {
-  height: 20rem !important;
+  height: 40% !important;
   border-radius: 1rem !important;
 }
 
 .current-selection {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to left top,
     rgba(193, 255, 207, 0.5),
     rgba(165, 230, 122, 0.7)
-  );
+  ); */
   display:flex;
   justify-content: space-around;
   align-items: center;
@@ -236,6 +250,10 @@ button {
 .current-selection .selection-card {
   height: 12rem!important; 
   margin: 1rem 0!important;
+}
+
+.display-on-sm {
+  display: none;
 }
 
 @media (max-width: 400px) {
@@ -251,7 +269,25 @@ button {
     height: 6rem !important;
     width: 6rem;
     margin: 0.5rem!important;
-    
   }
 
+  .selection-box .selection-card {
+    width: 15rem;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 576px) {
+  .current-selection .selection-card {
+    height: 120px !important;
+    width: 130px!important;
+    margin: 16px!important;
+  }
+}
+@media (min-width: 573px) and (max-width: 768px){
+  .display-on-sm {
+    display: block !important;
+  }
+  .hide-on-sm {
+    display: none;
+  }
 }
