@@ -205,10 +205,11 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 94vh;
+  height: 100vh;
   max-width: 1920px;
   max-height: 1080px;
   margin: 0!important;
+  padding: 0!important;
   overflow: scroll;
 }
 
@@ -234,6 +235,7 @@ button {
 .selection-card {
   height: 40% !important;
   border-radius: 1rem !important;
+  margin-right: 0;
 }
 
 .current-selection {

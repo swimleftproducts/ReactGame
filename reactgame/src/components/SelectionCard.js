@@ -27,18 +27,18 @@ class SelectionCard extends Component {
 
     render() {
         return (
-            <ul className="card selection-card">
-                <li onClick={()=>{
+            <div className="card selection-card col-lg-3 col-md-3 col-sm-5 ">
+                <div onClick={()=>{
                     console.log(this.cardValueAndLocation(this.props.id,this.props.userPage,this.props.userChoice))
                     this.props.onClickHandler(this.cardValueAndLocation(this.props.id,this.props.userPage,this.props.userChoice))}}>
                     {/*SelectionImages */}
                     <img src={this.props.imgSrc} className="card-img-top" alt="..." />
-                    <div className="card-body selection-card-text justify-content-center align-items-center">
+                    <div className="card-dody selection-card-text justify-content-center align-items-center">
                         {/* SeectionIds */}
                         <p className="card-text h1 text-white">{this.props.text}</p>
                     </div>
-                </li>
-            </ul>
+                </div>
+            </div>
         )
     }
     // Tracking User Interactions
