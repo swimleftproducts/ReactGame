@@ -8,7 +8,7 @@ class Selection extends Component {
         return (
             <div className="selection-page container-fluid row flex-row-reverse flex-j-a">
                 <div class="current-selection col-lg-3 col-md-12 flex-lg-column flex-md-row flex-sm-row ">
-                    <div class="card selection-card col-lg-6w col-md-3 col-sm-3"></div>
+                    <div class="card selection-card col-lg-6 col-md-3 col-sm-3" ></div>
                     <div class="card selection-card col-lg-6 col-md-3 col-sm-3"></div>
                     <div class="card selection-card col-lg-6 col-md-3 col-sm-3"></div>
                 </div>
@@ -16,6 +16,7 @@ class Selection extends Component {
                 <div className="selection-box col-lg-9 flex-wrap">
                     {this.renderSelectionCard()}
                 </div>
+                
             </div> 
         ) 
     }   
@@ -46,10 +47,19 @@ class Selection extends Component {
             return(
                 <SelectionCard  onClickHandler={this.props.setUserChoice} userPage={this.props.userPage} userChoice={this.props.userChoice} id={card.id} key={card.id} imgSrc={card.imgSrc} text={card.text} />
             )
+            
         })
-
-        return  listOfCards 
+        // this adds the breakpoints
+        const w100 = <div className="w-100  hide-on-sm"></div>;
+        const w100OnSm = <div className="w-100 display-on-sm"></div>;
+        listOfCards.splice(3, 0, w100)
+        listOfCards.splice(2, 0, w100OnSm)
+        listOfCards.splice(6, 0, w100OnSm)
+        console.log(listOfCards)
+        
+        return  listOfCards ;
     }
+   
 }
 
 export default Selection
