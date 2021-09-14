@@ -33,9 +33,9 @@ class SelectionCard extends Component {
                     this.props.onClickHandler(this.cardValueAndLocation(this.props.id,this.props.userPage,this.props.userChoice))}}>
                     {/*SelectionImages */}
                     <img src={this.props.imgSrc} className="card-img-top" alt="..." />
-                    <div className="card-dody selection-card-text justify-content-center align-items-center">
+                    <div className="card-body selection-card-text justify-content-center align-items-center">
                         {/* SeectionIds */}
-                        <p className="card-text h1 text-white">{this.props.text}</p>
+                        <p className="card-text h1 text-black">{this.props.text}</p>
                     </div>
                 </div>
             </div>

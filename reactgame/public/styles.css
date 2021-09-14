@@ -293,3 +293,12 @@ button {
     display: none;
   }
 }
+
+.selection-card img{
+  height: 60%;
+}
+
+.selection-card-text {
+  height: 40%!important;
+  overflow: hidden!important;
+}
