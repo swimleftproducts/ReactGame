@@ -295,10 +295,10 @@ button {
 }
 
 .selection-card img{
-  height: 60%;
+  height: 60%!important;
+  overflow:hidden !important;
 }
 
-.selection-card-text {
-  height: 40%!important;
-  overflow: hidden!important;
+.card-body {
+  background-color:rgba(235, 235, 235, 0.7);
 }
