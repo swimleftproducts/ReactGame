@@ -7,15 +7,27 @@ class Selection extends Component {
     render() {
         return (
             <div className="selection-page container-fluid row flex-row-reverse flex-j-a">
-                <div class="current-selection col-lg-3 col-md-12 flex-lg-column flex-md-row flex-sm-row ">
-                    <div class="card selection-card col-lg-6 col-md-3 col-sm-3" ></div>
-                    <div class="card selection-card col-lg-6 col-md-3 col-sm-3"></div>
-                    <div class="card selection-card col-lg-6 col-md-3 col-sm-3"></div>
+                <div className="current-selection col-lg-3 col-md-12 flex-lg-column flex-md-row flex-sm-row ">
+                    <div className="card selection-card col-lg-6 col-md-3 col-sm-3" >Weapon</div>
+                    <div className="card selection-card col-lg-6 col-md-3 col-sm-3">Name</div>
+                    <div className="card selection-card col-lg-6 col-md-3 col-sm-3">Location</div>
                 </div>
                 
                 <div className="selection-box col-lg-9 flex-wrap">
                     {this.renderSelectionCard()}
-                </div>
+                    <div class="col-xs-12 col-sm-6 col-lg-4 border-2        
+                        border-secondary background-card card">
+                        <img src="./assets/2/weaponimages/1.jpeg" className="card-img-top" alt="..."/>
+                        <div class="card-body pb-0 mb-0">
+                             <h5 class="card-title">BACKGROUND 1</h5>
+                              <p className="card-text ">{this.props.text}</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                          click for more info
+                        </div>
+                    </div>
+            </div>
+               
                 
             </div> 
         ) 

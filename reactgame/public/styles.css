@@ -56,7 +56,7 @@
   margin: 10px 10px 10px 0;
   padding: 0;
   overflow: hidden;
-  width: 300px;
+  /* width: 300px; */
 }
 
 button {
@@ -156,6 +156,8 @@ button {
   height: 65% !important;
 }
 
+
+
 .container-box {
   height: auto;
   text-align: center;
@@ -233,11 +235,18 @@ button {
 }
 
 .selection-card {
-  height: 40% !important;
+  /* width: 10rem!important; */
+  height: 400px !important;
   border-radius: 1rem !important;
   margin-right: 0;
 }
+.selection-card img {
+  height: 60% !important;
+  object-fit: cover;
+  overflow: hidden;
+}
 
+/*For the current selection container*/
 .current-selection {
   /* background: linear-gradient(
     to left top,
@@ -276,6 +285,10 @@ button {
   .selection-box .selection-card {
     width: 15rem;
   }
+
+  .card {
+    width: 300px;
+  }
 }
 
 @media (min-width: 401px) and (max-width: 576px) {
@@ -284,7 +297,11 @@ button {
     width: 130px!important;
     margin: 16px!important;
   }
+  .card {
+    width: 300px;
+  }
 }
+
 @media (min-width: 573px) and (max-width: 768px){
   .display-on-sm {
     display: block !important;
@@ -293,11 +310,11 @@ button {
     display: none;
   }
 }
-
+/* 
 .selection-card img{
   height: 60%!important;
   overflow:hidden !important;
-}
+} */
 
 .card-body {
   background-color:rgba(235, 235, 235, 0.7);
