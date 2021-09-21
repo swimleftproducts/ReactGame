@@ -39,7 +39,7 @@ class SelectionCard extends Component {
 
     render() {
         return (
-            <div className="card selection-card col-lg-3 col-md-3 col-sm-5 ">
+            <div className="card selection-card col-xl-3 col-lg-4 col-sm-5 ">
                 <div onClick={()=>{
                     const selectArray ={
 

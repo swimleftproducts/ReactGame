@@ -7,13 +7,13 @@ class Selection extends Component {
     render() {
         return (
             <div className="selection-page container-fluid row flex-row-reverse flex-j-a">
-                <div className="current-selection col-lg-3 col-md-12 flex-lg-column flex-md-row flex-sm-row ">
-                    <div className="card selection-card col-lg-6 col-md-3 col-sm-3" >Weapon</div>
-                    <div className="card selection-card col-lg-6 col-md-3 col-sm-3">Name</div>
-                    <div className="card selection-card col-lg-6 col-md-3 col-sm-3">Location</div>
+                <div className="current-selection col-xl-3 col-lg-12 flex-xl-column flex-lg-row flex-md-row ">
+                    <div className="card selected-card col-xl-6 col-lg-3 col-sm-3" >Weapon</div>
+                    <div className="card selected-card col-xl-6 col-lg-3 col-sm-3">Name</div>
+                    <div className="card selected-card col-xl-6 col-lg-3 col-sm-3">Location</div>
                 </div>
                 
-                <div className="selection-box col-lg-9 flex-wrap">
+                <div className="selection-box col-xl-9 flex-wrap">
                     {this.renderSelectionCard()}
                     <div class="col-xs-12 col-sm-6 col-lg-4 border-2        
                         border-secondary background-card card">

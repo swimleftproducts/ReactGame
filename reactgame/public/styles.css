@@ -209,7 +209,6 @@ button {
   background-position: center;
   height: 100vh;
   max-width: 1920px;
-  max-height: 1080px;
   margin: 0!important;
   padding: 0!important;
   overflow: scroll;
@@ -235,15 +234,16 @@ button {
 }
 
 .selection-card {
-  /* width: 10rem!important; */
+  width: 260px!important;
   height: 400px !important;
   border-radius: 1rem !important;
   margin-right: 0;
 }
-.selection-card img {
-  height: 60% !important;
-  object-fit: cover;
-  overflow: hidden;
+
+.selected-card {
+  width: 200px !important;
+  height: 280px !important;
+  border-radius: 1rem !important;
 }
 
 /*For the current selection container*/
@@ -276,9 +276,9 @@ button {
     width: 100% !important;
     padding: 0 !important;
   }
-  .current-selection .selection-card {
-    height: 6rem !important;
-    width: 6rem;
+  .selected-card {
+    height: 7rem !important;
+    width: 7rem;
     margin: 0.5rem!important;
   }
 
@@ -291,18 +291,18 @@ button {
   }
 }
 
-@media (min-width: 401px) and (max-width: 576px) {
-  .current-selection .selection-card {
-    height: 120px !important;
-    width: 130px!important;
-    margin: 16px!important;
+@media (min-width: 401px) and (max-width: 645px) {
+  .selected-card {
+    height: 160px !important;
+    width: 160px!important;
+    margin: 1rem!important;
   }
   .card {
     width: 300px;
   }
 }
 
-@media (min-width: 573px) and (max-width: 768px){
+@media (min-width: 573px) and (max-width: 803px){
   .display-on-sm {
     display: block !important;
   }
