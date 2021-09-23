@@ -243,6 +243,18 @@ button {
   height: 240px !important;
   border-radius: 1rem !important;
 }
+.selected-card img {
+  height: 65%;
+}
+
+ .selection-card-img {
+   height: 75%;
+ }
+
+ .selection-card-img img {
+   height: 100%;
+   width: 100%;
+ }
 
 /*For the current selection container*/
 .current-selection {
@@ -256,10 +268,10 @@ button {
   align-items: center;
 }
 
-.current-selection .selection-card {
+/* .current-selection .selection-card {
   height: 12rem!important; 
   margin: 1rem 0!important;
-}
+} */
 
 .display-on-sm {
   display: none;
@@ -279,6 +291,9 @@ button {
     width: 7rem;
     margin: 0.5rem!important;
   }
+  .selected-card .card-body p {
+    display: none;
+  }
 
   .selection-box .selection-card {
     width: 15rem;
@@ -295,6 +310,10 @@ button {
     width: 160px!important;
     margin: 1rem!important;
   }
+  .selected-card p {
+    display: none;
+  }
+
   .card {
     width: 300px;
   }

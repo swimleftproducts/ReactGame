@@ -39,26 +39,18 @@ class SelectionCard extends Component {
 
     render() {
         return (
-            <div className="card selection-card col-xl-3 col-lg-4 col-sm-5 ">
-                <div onClick={()=>{
-                    const selectArray ={
-
-                    }
-                    console.log(this.cardValueAndLocation(this.props.id,this.props.imgSrc, this.props.text, this.props.userPage,this.props.userChoice))
-                    this.props.onClickHandler(this.cardValueAndLocation(this.props.id,this.props.imgSrc, this.props.text ,this.props.userPage,this.props.userChoice))
-                    }}>
-                    {/*SelectionImages */}
-
-
-                    <img src={this.props.imgSrc} className="card-img-top" alt="..." />
-
-                    <div className="card-body pb-0 mb-0">
-                        {/* SeectionIds */}
-                        <p className="card-text h3 text-black">{this.props.text}</p>
-                    </div>
-                    <div class="card-footer text-muted">
-                        {this.props.text}
-                    </div>
+            <div className="card selection-card col-xl-3 col-lg-4 col-sm-5 " 
+            onClick={()=>{
+                const selectArray ={ }
+                console.log(this.cardValueAndLocation(this.props.id,this.props.imgSrc, this.props.text, this.props.userPage,this.props.userChoice))
+                this.props.onClickHandler(this.cardValueAndLocation(this.props.id,this.props.imgSrc, this.props.text ,this.props.userPage,this.props.userChoice))}}>
+                {/*SelectionImages */}
+                <div className="card-img-top selection-card-img">
+                    <img src={this.props.imgSrc} alt="..." />
+                </div>
+                <div className="card-body pb-0 mb-0">
+                {/* SeectionIds */}
+                    <p className="card-text h3 text-black text-center">{this.props.text}</p>
                 </div>
             </div>
         )

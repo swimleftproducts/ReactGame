@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import SelectionCard from './SelectionCard'
+import UserChoice from './UserChoice'
+
 
 class Selection extends Component {
 
@@ -8,14 +10,32 @@ class Selection extends Component {
         return (
             <div className="selection-page container-fluid row flex-row-reverse flex-j-a">
                 <div className="current-selection col-xl-3 col-lg-12 flex-xl-column flex-lg-row flex-md-row ">
-                    <div className="card selected-card col-xl-6 col-lg-3 col-sm-3" >Weapon</div>
-                    <div className="card selected-card col-xl-6 col-lg-3 col-sm-3">Name</div>
-                    <div className="card selected-card col-xl-6 col-lg-3 col-sm-3">Location</div>
+                    <div class="card selected-card col-xl-6 col-lg-3 col-sm-3">
+                        <img src="../assets/2/glamdring.jpeg" alt="" class="card-img-top"/>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Weapon</h5>
+                            <p class="card-text text-center">Click here to reselect</p>
+                        </div>
+                    </div>
+                    <div class="card selected-card col-xl-6 col-lg-3 col-sm-3">
+                        <img src="../assets/2/nazgul.jpeg" alt="" class="card-img-top"/>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Name</h5>
+                            <p class="card-text text-center">Click here to reselect</p>
+                        </div>
+                    </div>
+                    <div class="card selected-card col-xl-6 col-lg-3 col-sm-3">
+                        <img src="../assets/2/hobbiton.jpeg" alt="" class="card-img-top"/>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Location</h5>
+                            <p class="card-text text-center">Click here to reselect</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div className="selection-box col-xl-9 flex-wrap">
                     {this.renderSelectionCard()}
-                    <div class="col-xs-12 col-sm-6 col-lg-4 border-2        
+                    {/* <div class="col-xs-12 col-sm-6 col-lg-4 border-2        
                         border-secondary background-card card">
                         <img src="./assets/2/weaponimages/1.jpeg" className="card-img-top" alt="..."/>
                         <div class="card-body pb-0 mb-0">
@@ -25,7 +45,7 @@ class Selection extends Component {
                         <div class="card-footer text-muted">
                           click for more info
                         </div>
-                    </div>
+                    </div> */}
             </div>
                
                 
