@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+// this may not be necessary?
 class UserChoice extends Component {
     render(){
         return (
