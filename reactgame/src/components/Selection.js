@@ -32,23 +32,9 @@ class Selection extends Component {
                         </div>
                     </div>
                 </div>
-                
                 <div className="selection-box col-xl-9 flex-wrap">
                     {this.renderSelectionCard()}
-                    {/* <div class="col-xs-12 col-sm-6 col-lg-4 border-2        
-                        border-secondary background-card card">
-                        <img src="./assets/2/weaponimages/1.jpeg" className="card-img-top" alt="..."/>
-                        <div class="card-body pb-0 mb-0">
-                             <h5 class="card-title">BACKGROUND 1</h5>
-                              <p className="card-text ">{this.props.text}</p>
-                        </div>
-                        <div class="card-footer text-muted">
-                          click for more info
-                        </div>
-                    </div> */}
-            </div>
-               
-                
+                </div>
             </div> 
         ) 
     }   
