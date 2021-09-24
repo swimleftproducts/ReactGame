@@ -41,9 +41,10 @@ class SelectionCard extends Component {
         return (
             <div className="card selection-card col-xl-3 col-lg-4 col-sm-5 " 
             onClick={()=>{
-                const selectArray ={ }
+                // const selectArray ={ }
                 console.log(this.cardValueAndLocation(this.props.id,this.props.imgSrc, this.props.text, this.props.userPage,this.props.userChoice))
                 this.props.onClickHandler(this.cardValueAndLocation(this.props.id,this.props.imgSrc, this.props.text ,this.props.userPage,this.props.userChoice))}}>
+
                 {/*SelectionImages */}
                 <div className="card-img-top selection-card-img">
                     <img src={this.props.imgSrc} alt="..." />
@@ -63,6 +64,3 @@ class SelectionCard extends Component {
 }   
 
 export default SelectionCard
-{/*              */}
-
-        // selection-card-text justify-content-center align-items-center 
