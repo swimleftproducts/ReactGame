@@ -238,23 +238,27 @@ button {
   border-radius: 1rem !important;
 }
 
+.selection-card-img {
+  height: 75%;
+}
+
+.selection-card-img img {
+  height: 100%;
+  width: 100%;
+}
+
 .selected-card {
   width: 200px !important;
   height: 240px !important;
   border-radius: 1rem !important;
 }
-.selected-card img {
+.selected-card-img {
   height: 65%;
 }
-
- .selection-card-img {
-   height: 75%;
- }
-
- .selection-card-img img {
-   height: 100%;
-   width: 100%;
- }
+.selected-card-img img {
+  width: 100%;
+  height: 100%;
+}
 
 /*For the current selection container*/
 .current-selection {
