@@ -31,14 +31,14 @@ const Nav = (props) => {
                  <span class="navbar-toggler-icon"></span>
                  </button>
                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className = "navbar-nav ms-auto mb-2 mb-lg-0">
-                    <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Background"} value = {"Background"} />
-                    {/* This is used to show all the drop down menus */}
-                    {renderDropdowns}
-                    <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Finalize"} value = {"Finalize"} />
-                    <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Results"} value = {"Results"} />
-                    <li className="nav-item px-2 "><button className="btn btn-outline-danger" ><a href = "/">Reset</a></button></li>
-                </ul>
+                    <ul className = " px-2 navbar-nav ms-auto mb-2 mb-lg-0">
+                        <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Background"} value = {"Background"} />
+                        {/* This is used to show all the drop down menus */}
+                        {renderDropdowns}
+                        <BasicTab selectedMenu = {selectedMenu} setUserPage = {setUserPage} label = {"Results"} value = {"Results"} />
+                        <li id="resetButton" className="nav-item " ><button className="btn btn-outline-danger" ><a href = "/">Reset</a></button></li>
+                        {console.log("window width",window.innerWidth>500)}
+                    </ul>
                 </div>
           </nav>  
         </div>

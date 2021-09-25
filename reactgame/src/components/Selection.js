@@ -32,7 +32,7 @@ class Selection extends Component {
                             <img  src={this.props.userChoice[2].imgSrc} alt="" />
                         </div>
                         <div className="card-body">
-                            <h5 className="card-title text-center">Location</h5>
+                            <h5 className="card-title text-center col-xs-h6 ">Location</h5>
                             <p className="card-text text-center">Click here to reselect</p>
                         </div>
                     </div>

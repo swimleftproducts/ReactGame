@@ -4,10 +4,32 @@
   box-sizing: border-box;
 }
 
+/* nav styling  */
+
 .eh-height-nav {
   background-color: blueviolet;
   height: 150px;
 }
+
+
+#resetButton{
+  padding-left : 1.0rem;
+}
+@media screen and (max-width: 768px) {
+  #resetButton{
+    padding-top: .5rem;
+  }
+
+  .nav-link{
+    padding-left:1rem !important;
+  }
+  
+}
+
+
+
+
+/*  */
 
 .eh-intro {
   height: 100vh;
@@ -193,7 +215,7 @@ button {
 
 @media screen and (max-width: 768px) {
   .card-eh {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
@@ -266,6 +288,9 @@ button {
 }
 
 @media (max-width: 400px) {
+  h5{
+    font-size: 1rem;
+  }
   .current-selection {
     flex-direction: row;
     display: flex;
@@ -291,7 +316,11 @@ button {
     width: 300px;
   }
 }
-
+@media (max-width: 500px){
+  h5 {
+    font-size: 1rem;
+  }
+}
 @media (min-width: 401px) and (max-width: 645px) {
   .selected-card {
     height: 160px !important;
@@ -315,6 +344,8 @@ button {
     display: none;
   }
 }
+
+
 /* 
 .selection-card img{
   height: 60%!important;
@@ -324,3 +355,4 @@ button {
 .card-body {
   background-color:rgba(235, 235, 235, 0.7);
 }
+
