@@ -199,11 +199,6 @@ button {
 
 /* Selection.js */
 .selection-page {
-  /* background:linear-gradient(
-    to right bottom,
-    rgba(110, 214, 233, 0.5),
-    rgba(221, 88, 203, 0.7)
-  ); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -215,21 +210,10 @@ button {
 }
 
 .selection-box {
-  /* background: linear-gradient(
-    to left top,
-    rgba(255, 255, 255, 0.5),
-    rgba(235, 235, 235, 0.7)
-  ); */
   justify-content: space-around;
   align-items: center;
   display: flex;
-  /* overflow:scroll; */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-.selection-box::-webkit-scrollbar {
-  display: none; 
-  
+
 }
 
 .selection-card {
