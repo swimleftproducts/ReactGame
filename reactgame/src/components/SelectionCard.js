@@ -7,12 +7,12 @@ import React, { Component } from 'react';
 
 class SelectionCard extends Component {
    
-    cardValueAndLocation(id,imgsrc,text,userPage,userChoice){
+    cardValueAndLocation(id,imgSrc,text,userPage,userChoice){
         
        switch (userPage) {
             case 'SelectWeapon':
                 return  [
-                    {imgsrc,
+                    {imgSrc,
                     text,
                     id
                     },
@@ -20,13 +20,13 @@ class SelectionCard extends Component {
                     userChoice[2]];
                
             case 'SelectName':
-                return [userChoice[0],{imgsrc,
+                return [userChoice[0],{imgSrc,
                     text,
                     id
                     },userChoice[2]];
                 
             case 'SelectLocation':
-                return [userChoice[0],userChoice[1],{imgsrc,
+                return [userChoice[0],userChoice[1],{imgSrc,
                     text,
                     id
                     }];

@@ -46,22 +46,22 @@ class Selection extends Component {
 
     renderSelectionCard (){
         const imgArray = [
-            {imgSrc:"../assets/2/weaponimages/1.jpeg",
+            {imgSrc:"./assets/2/weaponimages/1.jpeg",
              text: "sample 1",
              id:"1"},
-            {imgSrc:"../assets/2/weaponimages/2.jpeg",
+            {imgSrc:"./assets/2/weaponimages/2.jpeg",
              text: "sample 2",
              id:"2"},
-            {imgSrc:"../assets/2/weaponimages/3.jpeg",
+            {imgSrc:"./assets/2/weaponimages/3.jpeg",
              text: "sample 3",
              id:"3"},
-            {imgSrc:"../assets/2/weaponimages/5.jpeg",
+            {imgSrc:"./assets/2/weaponimages/5.jpeg",
              text: "sample 4",
              id:"4"},
-            {imgSrc:"../assets/2/weaponimages/6.jpeg",
+            {imgSrc:"./assets/2/weaponimages/6.jpeg",
              text: "sample 5",
              id:"5"},
-            {imgSrc:"../assets/2/weaponimages/1.jpeg",
+            {imgSrc:"./assets/2/weaponimages/1.jpeg",
              text: "sample 6",
              id:"6"}
         ]

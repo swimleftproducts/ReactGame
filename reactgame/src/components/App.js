@@ -32,15 +32,15 @@ const [userPage,setUserPage] = useState('Intro')
 const [story,setStory] = useState('')
 //this is for setting user selection
 const [userChoice, setUserChoice]= useState([
-    {imgSrc:"../assets/2/nazgul.jpeg",
+    {imgSrc:"./assets/2/nazgul.jpeg",
      text:"Nazgul",
      id:"nazgul"
     },
-    {imgSrc:"../assets/2/glamdring.jpeg",
+    {imgSrc:"./assets/2/glamdring.jpeg",
      text:"Glamdring",
      id: "glamdring"
     },
-    {imgSrc:"../assets/2/hobbiton.jpeg",
+    {imgSrc:"./assets/2/hobbiton.jpeg",
      text:"Hobbiton",
      id:"hobbiton"
     }
