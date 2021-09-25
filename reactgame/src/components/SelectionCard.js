@@ -43,6 +43,7 @@ class SelectionCard extends Component {
             onClick={()=>{
                 // const selectArray ={ }
                 console.log(this.cardValueAndLocation(this.props.id,this.props.imgSrc, this.props.text, this.props.userPage,this.props.userChoice))
+                
                 this.props.onClickHandler(this.cardValueAndLocation(this.props.id,this.props.imgSrc, this.props.text ,this.props.userPage,this.props.userChoice))}}>
 
                 {/*SelectionImages */}

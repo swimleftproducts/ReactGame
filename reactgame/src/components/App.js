@@ -45,7 +45,25 @@ const [userChoice, setUserChoice]= useState([
      id:"hobbiton"
     }
 ])
-   
+
+// const [userChoice, setUserChoice]= useState([
+//     {Value: "Weapone",
+//      imgSrc:"../assets/2/glamdring.jpeg",
+//      text:"Glamdring",
+//      id: "glamdring"
+//     },
+//     {Value: "Name",
+//      imgSrc:"../assets/2/nazgul.jpeg",
+//      text:"Nazgul",
+//      id:"nazgul"
+//     },
+//     {Value: "Location",
+//      imgSrc:"../assets/2/hobbiton.jpeg",
+//      text:"Hobbiton",
+//      id:"hobbiton"
+//     }
+// ])
+
     useEffect(() => {
         const newStory = gameSetUp.choose()
         setStory(newStory)
@@ -71,7 +89,7 @@ const [userChoice, setUserChoice]= useState([
             )
         }else if ((userPage === "SelectWeapon") || (userPage === "SelectLocation") || (userPage === "SelectName")){
             return (
-                 <Selection userChoice={userChoice} setUserChoice={setUserChoice} story={story} userPage={userPage}/>
+                 <Selection userChoice={userChoice} setUserChoice={setUserChoice} story={story} userPage={userPage} setUserPage={setUserPage}/>
             )
         }else if ((userPage === "Results")){
             return (

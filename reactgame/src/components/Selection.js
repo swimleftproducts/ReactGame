@@ -9,7 +9,7 @@ class Selection extends Component {
         return (
             <div className="selection-page container-fluid row flex-row-reverse flex-j-a">
                 <div className="current-selection col-xl-3 col-lg-12 flex-xl-column flex-lg-row flex-md-row ">
-                    <div className="card selected-card col-xl-6 col-lg-3 col-sm-3">
+                    <div onClick={()=>{this.props.setUserPage("SelectWeapon")}} className="card selected-card col-xl-6 col-lg-3 col-sm-3">
                         <div className="selected-card-img card-img-top">
                             <img src={this.props.userChoice[0].imgSrc} alt="" />
                         </div>
@@ -18,7 +18,7 @@ class Selection extends Component {
                             <p className="card-text text-center">Click here to reselect</p>
                         </div>
                     </div>
-                    <div className="card selected-card col-xl-6 col-lg-3 col-sm-3">
+                    <div onClick={()=>{this.props.setUserPage("SelectName")}}className="card selected-card col-xl-6 col-lg-3 col-sm-3">
                         <div className="selected-card-img card-img-top">
                             <img  src={this.props.userChoice[1].imgSrc} alt="" />
                         </div>
@@ -27,7 +27,7 @@ class Selection extends Component {
                             <p className="card-text text-center">Click here to reselect</p>
                         </div>
                     </div>
-                    <div className="card selected-card col-xl-6 col-lg-3 col-sm-3">
+                    <div onClick={()=>{this.props.setUserPage("SelectLocation")}}className="card selected-card col-xl-6 col-lg-3 col-sm-3">
                         <div className="selected-card-img card-img-top">
                             <img  src={this.props.userChoice[2].imgSrc} alt="" />
                         </div>
@@ -46,22 +46,22 @@ class Selection extends Component {
 
     renderSelectionCard (){
         const imgArray = [
-            {imgSrc:"./assets/2/weaponimages/1.jpeg",
+            {imgSrc:"../assets/2/weaponimages/1.jpeg",
              text: "sample 1",
              id:"1"},
-            {imgSrc:"./assets/2/weaponimages/2.jpeg",
+            {imgSrc:"../assets/2/weaponimages/2.jpeg",
              text: "sample 2",
              id:"2"},
-            {imgSrc:"./assets/2/weaponimages/3.jpeg",
+            {imgSrc:"../assets/2/weaponimages/3.jpeg",
              text: "sample 3",
              id:"3"},
-            {imgSrc:"./assets/2/weaponimages/5.jpeg",
+            {imgSrc:"../assets/2/weaponimages/5.jpeg",
              text: "sample 4",
              id:"4"},
-            {imgSrc:"./assets/2/weaponimages/6.jpeg",
+            {imgSrc:"../assets/2/weaponimages/6.jpeg",
              text: "sample 5",
              id:"5"},
-            {imgSrc:"./assets/2/weaponimages/1.jpeg",
+            {imgSrc:"../assets/2/weaponimages/1.jpeg",
              text: "sample 6",
              id:"6"}
         ]

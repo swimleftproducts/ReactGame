@@ -199,11 +199,11 @@ button {
 
 /* Selection.js */
 .selection-page {
-  background:linear-gradient(
+  /* background:linear-gradient(
     to right bottom,
     rgba(110, 214, 233, 0.5),
     rgba(221, 88, 203, 0.7)
-  );
+  ); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -211,7 +211,7 @@ button {
   max-width: 1920px;
   margin: 0!important;
   padding: 0!important;
-  overflow: scroll;
+  overflow: scroll; 
 }
 
 .selection-box {
