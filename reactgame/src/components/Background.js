@@ -59,7 +59,7 @@ const Background = (props) => {
       const renderMainPage =()=>{
            if(displayDetail===""){
                 return(
-                    <div class="mt-4 container-fluid">
+               <div class="mt-4 container-fluid">
                     <div class="row justify-content-around" >
                         {renderBackgroundCard(backgroundInfo)}
                     </div>

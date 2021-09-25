@@ -18,12 +18,14 @@ const Hints = (props) => {
     
     return (
         <div className="container justify-content-center" >
-            <br></br>
-            <br></br>
-            <SmallCardDisplay setDetail={setDetail} setUserPage={setUserPage}/>
-            
+           <br></br>
+           <br></br>
             {detail===""?"":<HintDetail title={detail} content={placeholder} setDetail={setDetail} detail={detail}/>}
-             
+               <br></br>
+            <br></br>
+            <SmallCardDisplay detail={detail} setDetail={setDetail} setUserPage={setUserPage}/>
+            
+           
            
             <div className="text-center" >
                     <div className="">
