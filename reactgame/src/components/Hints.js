@@ -13,11 +13,12 @@ const Hints = (props) => {
 
     
     const placeholder = "asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa asdfsafaaaaaaaaaaaaaaaaa aaaaa a aaaaaa aaaaaf a sdfadsf asf asdf as dfasdfasddsa"      
-
-   
     
     return (
-        <div className="container justify-content-center" >
+        <div onClick={(e) => {
+            e.stopPropagation()
+            setDetail("")
+        }}className="container-fluid row flex-row flex-j-a flex-md-col-reverse" >
            <br></br>
            <br></br>
             {detail===""?"":<HintDetail title={detail} content={placeholder} setDetail={setDetail} detail={detail}/>}

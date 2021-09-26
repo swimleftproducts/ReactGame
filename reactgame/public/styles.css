@@ -137,6 +137,36 @@ button {
   /* margin-bottom: 1rem !important; */
 }
 
+/* HintsDetail.js */
+
+.hintsDetail {
+  border: grey solid 5px;
+  margin: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.hintsDetail img {
+  height:300px;
+  width: 300px;
+  /* width: auto; */
+}
+.hintsDetail-img-box { 
+ height: 100%;
+ background-color: aquamarine;
+ padding: 2rem;
+}
+
+.hintsDetail-text-box {
+  height: 100%;
+  background-color: purple;
+  padding: 2rem;
+}
+
+.hintsDetail-text-box div {
+  height: 300px;
+  width: 300px;
+  background-color: rgba(2335, 234, 211, 0.8);
+}
 /* Results.js */
 .results {
   background-image: url('assets/2/hintimage.jpeg');
