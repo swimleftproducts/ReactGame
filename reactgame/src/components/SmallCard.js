@@ -6,45 +6,39 @@ const SmallCard = ({detail,Title,Text,onClick}) => {
         
         if (detail==="") {
          return(
-             
-            <div onClick={() => { onClick()}} className={`${detail===""?"col-xs-12 col-sm-6 col-lg-4 border-2 border-secondary background-card card":"card selected-card "} `}  style={detail===""?{"width":"18rem"}:{"width":"8rem"}}>
+            <div onClick={() => { onClick()}} className="col-xs-12 col-sm-6 col-lg-4 border-2 border-secondary background-card card"  style={{"width":"18rem"}}>
                 <img src="/assets/2/glamdring.jpeg" className="card-img-top" alt="..."/>
             <div className="card-body card-body-box">
-             <h5 className={detail===""?"card-text": "card-text text-center "}>{Title}</h5>
-            {detail===""?
-             <p className="card-text">{Text}</p>:null}
+                <h5 className="card-text">{Title}</h5>
+                <p className="card-text">{Text}</p>
             </div> 
         
             <div class="card-footer text-muted">
             click for more info
             </div>
             </div>
-         )
-        }else{
+        )
+        } else {
             return(
-             
-                <div onClick={() => { onClick()}} className={`${detail===""?"col-xs-12 col-sm-6 col-lg-4 border-2 border-secondary background-card card":"card selected-card "} `}  style={detail===""?{"width":"18rem"}:{"width":"8rem"}}>
+                <div onClick={() => { onClick()}} className="card selected-card "  style={{"width":"8rem"}}>
                     <img src="/assets/2/glamdring.jpeg" className="card-img-top" alt="..."/>
                 <div className="card-body card-body-box">
-                 <h5 className={detail===""?"card-text": "card-text text-center "}>{Title}</h5>
-                {detail===""?
-                 <p className="card-text">{Text}</p>:null}
+                    <h5 className="card-text text-center ">{Title}</h5>
                 </div> 
-            
                 <div class="card-footer text-muted">
                 click for more info
                 </div>
                 </div>
-             )  
+            )  
         }
     }
 
    
 
     return (
-      <>
-          {renderCard()}
-      </>
+    <>
+        {renderCard()}
+    </>
       
     )
 }   
