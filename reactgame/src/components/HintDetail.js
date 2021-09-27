@@ -4,22 +4,19 @@ const HintDetail = ({detail, setDetail,title,content}) => {
     
     
     return (
-        <div className="container-fluid col-12 ">
-
-        <div onClick={() => {setDetail("")}} className="hintsDetail row ">
-            <div className="col-md-12 col-lg-6 hintsDetail-img-box flex-j-a">
-                <img className=""  src="/assets/2/nazgul.jpeg" alt={detail}/>
-            </div>
-                
-            <div className="col-md-12 col-lg-6 hintsDetail-text-box flex-j-a col">
-                <div className="">
-                    <h2 className="text-center">{detail}</h2>
-                    <p className="text-justify">{content}</p>
+        <div className="col-12">
+            <div onClick={() => {setDetail("")}} className="hintsDetail row m-0 container-fluid">
+                <div className="hintsDetail-img-box col-lg-6 col-md-6 col-12 flex-j-a">
+                    <img src="/assets/2/nazgul.jpeg" alt={detail}/>
                 </div>
-               
+                    
+                <div className="hintsDetail-text-box col-lg-6 col-md-6 col-12 flex-j-a">
+                    <div className="">
+                        <h5 className="text-center">{detail}</h5>
+                        <p>{content}</p>
+                    </div>
+                </div> 
             </div>
-            
-        </div>
         </div>
        
       

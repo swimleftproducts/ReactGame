@@ -6,33 +6,38 @@ const SmallCard = ({detail,Title,Text,onClick}) => {
         
         if (detail==="") {
          return(
-            <div onClick={(e) => { 
+            <div className="card selected-card">
+                <div onClick={(e) => { 
                 e.stopPropagation()
                 onClick()
-                }} className="col-xs-12 col-sm-6 col-lg-4 border-2 border-secondary background-card card"  style={{"width":"18rem"}}>
-                <img src="/assets/2/glamdring.jpeg" className="card-img-top" alt="..."/>
-            <div className="card-body card-body-box">
-                <h5 className="card-text">{Title}</h5>
-                <p className="card-text">{Text}</p>
-            </div> 
+                }} className="selected-card-img card-img-top">
+                    <img src="/assets/2/glamdring.jpeg" alt="..."/>
+                </div>
+                <div className="card-body card-body-box flex-j-a">
+                    <h4 class="card-text text-center h5">{Title}</h4>
+                </div> 
         
-            <div class="card-footer text-muted">
-            click for more info
-            </div>
+                <div class="card-footer text-muted">
+                    click for more info
+                </div>
             </div>
         )
         } else {
             return(
-                <div onClick={(e) => { 
-                    e.stopPropagation()
-                    onClick()
-                }} className="card selected-card "  style={{"width":"8rem"}}>
-                    <img src="/assets/2/glamdring.jpeg" className="card-img-top" alt="..."/>
+                <div className="card selected-card">
+                    <div onClick={(e) => { 
+                        e.stopPropagation()
+                        onClick()
+                    }} className="selected-card-img card-img-top">
+                        <img src="/assets/2/glamdring.jpeg" alt="..."/>
+                    </div>
+
                     <div className="card-body card-body-box">
-                        <h5 className="card-text text-center ">{Title}</h5>
+                        <h4 className="card-text text-center h5 ">{Title}</h4>
                     </div> 
+
                     <div class="card-footer text-muted">
-                    click to go back
+                        click to go back
                     </div>
                 </div>
             )  
