@@ -7,7 +7,7 @@ class Selection extends Component {
 
     render() {
         return (
-            <div className="selection-page container-fluid row flex-row-reverse flex-j-a">
+            <div className="selection-page container-fluid row flex-row-reverse flex-j-a p-4">
                 <div className="current-selection col-xl-3 col-lg-12 flex-xl-column flex-lg-row flex-md-row ">
                     <div onClick={()=>{this.props.setUserPage("SelectWeapon")}} className="card selected-card col-xl-6 col-lg-3 col-sm-3">
                         <div className="selected-card-img card-img-top">
