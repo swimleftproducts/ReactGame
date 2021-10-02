@@ -7,14 +7,15 @@ import React, { Component } from 'react';
 
 class SelectionCard extends Component {
    
-    cardValueAndLocation(id,imgSrc,text,userPage,userChoice){
+    cardValueAndLocation(id,imgSrc,text,userPage,userChoice,type){
         
        switch (userPage) {
             case 'SelectWeapon':
                 return  [
                     {imgSrc,
                     text,
-                    id
+                    id,
+                    type
                     },
                     userChoice[1],
                     userChoice[2]];
@@ -22,13 +23,15 @@ class SelectionCard extends Component {
             case 'SelectName':
                 return [userChoice[0],{imgSrc,
                     text,
-                    id
+                    id,
+                    type
                     },userChoice[2]];
                 
             case 'SelectLocation':
                 return [userChoice[0],userChoice[1],{imgSrc,
                     text,
-                    id
+                    id,
+                    type
                     }];
                
             default:
@@ -37,14 +40,29 @@ class SelectionCard extends Component {
       
     }
 
+    isChosen(userChoice, type, id){
+        let active = false
+       
+        userChoice.forEach((choice) => {
+            if(choice.type===type){
+                if(choice.id===id){
+                    active=true
+                }
+            }
+        }
+        )
+        return active
+
+    }
+
     render() {
         return (
-            <div className="card selection-card col-xl-3 col-lg-4 col-sm-5 " 
+            <div className={`${this.isChosen(this.props.userChoice, this.props.type,this.props.id)?"selection-card-active":""} card selection-card col-xl-3 col-lg-4 col-sm-5 `} 
             onClick={()=>{
                 // const selectArray ={ }
-                console.log(this.cardValueAndLocation(this.props.id,this.props.imgSrc, this.props.text, this.props.userPage,this.props.userChoice))
+               
                 
-                this.props.onClickHandler(this.cardValueAndLocation(this.props.id,this.props.imgSrc, this.props.text ,this.props.userPage,this.props.userChoice))}}>
+                this.props.onClickHandler(this.cardValueAndLocation(this.props.id,this.props.imgSrc, this.props.text ,this.props.userPage,this.props.userChoice, this.props.type))}}>
 
                 {/*SelectionImages */}
                 <div className="card-img-top selection-card-img">

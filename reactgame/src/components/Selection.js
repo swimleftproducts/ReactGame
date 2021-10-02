@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SelectionCard from './SelectionCard'
+import UserChoice from './UserChoice';
 
 
 class Selection extends Component {
@@ -9,49 +10,35 @@ class Selection extends Component {
         return (
             <div className="selection-page container-fluid row flex-row-reverse flex-j-a p-4">
                 <div className="current-selection col-xl-3 col-lg-12 flex-xl-column flex-lg-row flex-md-row ">
-                    <div onClick={()=>{this.props.setUserPage("SelectWeapon")}} className="card selected-card col-xl-6 col-lg-3 col-sm-3">
-                        <div className="selected-card-img card-img-top">
-                            <img src={this.props.userChoice[0].imgSrc} alt="" />
-                        </div>
-                        <div className="card-body">
-                            <h5 className="card-title text-center">Weapon</h5>
-                            <p className="card-text text-center">Click here to reselect</p>
-                        </div>
-                    </div>
-                    <div onClick={()=>{this.props.setUserPage("SelectName")}}className="card selected-card col-xl-6 col-lg-3 col-sm-3">
-                        <div className="selected-card-img card-img-top">
-                            <img  src={this.props.userChoice[1].imgSrc} alt="" />
-                        </div>
-                        <div className="card-body">
-                            <h5 className="card-title text-center">Name</h5>
-                            <p className="card-text text-center">Click here to reselect</p>
-                        </div>
-                    </div>
-                    <div onClick={()=>{this.props.setUserPage("SelectLocation")}}className="card selected-card col-xl-6 col-lg-3 col-sm-3">
-                        <div className="selected-card-img card-img-top">
-                            <img  src={this.props.userChoice[2].imgSrc} alt="" />
-                        </div>
-                        <div className="card-body">
-                            <h5 className="card-title text-center col-xs-h6 ">Location</h5>
-                            <p className="card-text text-center">Click here to reselect</p>
-                        </div>
-                    </div>
+                    {this.renderUserChoice()}
                 </div>
                 <div className="selection-box col-xl-9 flex-wrap">
                     {this.renderSelectionCard()}
                 </div>
-                <div className="text-center btn-selection my-3">
+                <div className="text-center btn-selection ">
                     <button className="btn btn-primary btn-lg " onClick={() => {this.props.setUserPage("Results")}}> Ready to the result?</button>
                 </div>  
             </div> 
         ) 
     }   
-
+    renderUserChoice() {
+        return (this.props.userChoice.map((iterator) => {
+            return(
+                <UserChoice userChoice={iterator} setUserPage={this.props.setUserPage} userPage={this.props.userPage}/>
+            )
+        })
+        )
+    }
     renderSelectionCard (){
-        const imgArray = [
+
+        //pull array of options objects from story line
+
+
+        let imgArray = [
             {imgSrc:"./assets/2/weaponimages/1.jpeg",
              text: "sample 1",
-             id:"1"},
+             id:"1"
+            },
             {imgSrc:"./assets/2/weaponimages/2.jpeg",
              text: "sample 2",
              id:"2"},
@@ -69,9 +56,14 @@ class Selection extends Component {
              id:"6"}
         ]
 
+        // add key of type with value of userPage onto each object inside of imgArray
+        imgArray.forEach((imgObj) => {
+            imgObj.type=this.props.userPage
+        })
+
         const listOfCards = imgArray.map((card) => {
             return(
-                <SelectionCard  onClickHandler={this.props.setUserChoice} userPage={this.props.userPage} userChoice={this.props.userChoice} id={card.id} key={card.id} imgSrc={card.imgSrc} text={card.text} />
+                <SelectionCard  onClickHandler={this.props.setUserChoice} userPage={this.props.userPage} userChoice={this.props.userChoice} id={card.id} key={card.id} imgSrc={card.imgSrc} text={card.text} type={card.type} />
             )
             
         })
@@ -81,7 +73,6 @@ class Selection extends Component {
         listOfCards.splice(3, 0, w100)
         listOfCards.splice(2, 0, w100OnSm)
         listOfCards.splice(6, 0, w100OnSm)
-        console.log(listOfCards)
         
         return  listOfCards ;
     }

@@ -262,6 +262,9 @@ button {
   height: 400px !important;
   border-radius: 1rem !important;
 }
+.selection-card-active{
+  filter: drop-shadow(0.4rem 0.4rem 0.4rem #a8a9aa)
+}
 
 .selection-card-img {
   height: 75%;
@@ -276,6 +279,12 @@ button {
   width: 200px !important;
   height: 240px !important;
   border-radius: 1rem !important;
+  
+}
+
+.selected-card-active{
+  border: 5px solid rgba(9, 32, 43, 0.7);
+  filter: drop-shadow(0.4rem 0.4rem 0.4rem #a8a9aa);
 }
 .selected-card-img {
   height: 65%;
