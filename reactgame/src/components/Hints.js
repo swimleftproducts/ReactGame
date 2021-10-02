@@ -20,19 +20,19 @@ const Hints = (props) => {
             e.stopPropagation() 
             setDetail("")}}className="row" >
                 
-                <SmallCardDisplay detail={detail} setDetail={setDetail} setUserPage={setUserPage}/>
-
                 {detail===""?"":<HintDetail title={detail} content={placeholder} setDetail={setDetail} detail={detail}/>}
                 <br></br>
+                <br></br> 
+
+                <SmallCardDisplay detail={detail} setDetail={setDetail} setUserPage={setUserPage}/>
+                
+                <div className="text-center order-3">
                 <br></br>
-                <div className="text-center" >
-                    <div className="order-10">
-                    <br></br>
-                            <button className="btn btn-primary btn-lg " onClick={() => {setUserPage("SelectWeapon")}}> 
-                            Ready to make your selection?
-                        </button>
-                    </div>   
-                </div>
+                        <button className="btn btn-primary btn-lg " onClick={() => {setUserPage("SelectWeapon")}}> 
+                        Ready to make your selection?
+                    </button>
+                </div>   
+                
             </div>
         </div>
         

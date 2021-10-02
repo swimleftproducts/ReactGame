@@ -3,7 +3,7 @@ import SmallCard from './SmallCard'
 
 const SmallCardDisplay = ({detail, setUserPage, setDetail}) => {
     return(
-        <div className="col-12 order-md-2" >
+        <div className="col-12 p-0 order-1 order-lg-2 order-xl-2 mb-3 mb-lg-1 mb-xl-1" >
             <div class="container-fluid flex-j-a" >
                 <SmallCard detail={detail} Title={"Weapon"} Text={"asdfsafsafasdfasdfas"} onClick={() => {
                     setDetail("Weapon")
