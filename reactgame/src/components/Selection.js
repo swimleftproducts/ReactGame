@@ -40,6 +40,9 @@ class Selection extends Component {
                 <div className="selection-box col-xl-9 flex-wrap">
                     {this.renderSelectionCard()}
                 </div>
+                <div className="text-center btn-selection my-3">
+                    <button className="btn btn-primary btn-lg " onClick={() => {this.props.setUserPage("Results")}}> Ready to the result?</button>
+                </div>  
             </div> 
         ) 
     }   
