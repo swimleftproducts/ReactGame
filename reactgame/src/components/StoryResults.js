@@ -6,28 +6,28 @@ import ResultsCard from './ResultsCard';
 
 class StoryResults extends Component {
 
-      render() {
+    render () {
         return (
-         <div class="container-fluid flex-row-reverse row align-items-center justify-content-around box">
-            <div class="container-box col-xl-3 col-lg-12 col-md-12 col-sm-12 sticky-top">Correct answer was</div>
-             {this.renderResultCard(this.props.correctResults)}
-         </div>
-         
-        )
+            <div class="container-fluid flex-row-reverse row align-items-center justify-content-around box">
+                <div class="container-box col-xl-3 col-lg-12 col-md-12 col-sm-12 sticky-top">Correct answer was</div>
+                { this.renderResultCard(this.props.correctResults) }
+            </div>
+
+        );
     }
 
-    renderResultCard(correctResults) {
-        
-    
+    renderResultCard (correctResults) {
+
+
         const listOfCards = correctResults.map((card) => {
             return (
-                <ResultsCard imgSrc={card.imgSrc} text={card.text} key={card.id}/>
-            )
+                <ResultsCard imgSrc={ card.imgSrc } text={ card.text } key={ card.id } />
+            );
         });
 
-        return listOfCards
+        return listOfCards;
     }
-    
+
 }
 
-export default StoryResults
+export default StoryResults;

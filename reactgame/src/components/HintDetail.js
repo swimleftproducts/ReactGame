@@ -1,29 +1,29 @@
 import React from 'react';
 
-const HintDetail = ({detail, setDetail,title,content}) => {
-    
-    
+const HintDetail = ({ detail, setDetail, title, content }) => {
+
+
     return (
         <div className="col-12 order-2">
-            <div onClick={() => {setDetail("")}} className="hintsDetail row m-0 container-fluid">
+            <div onClick={ () => { setDetail(""); } } className="hintsDetail row m-0 container-fluid">
                 <div className="hintsDetail-img-box col-lg-6 col-md-6 col-12 flex-j-a">
-                    <img src="/assets/2/nazgul.jpeg" alt={detail}/>
+                    <img src="/assets/2/nazgul.jpeg" alt={ detail } />
                 </div>
-                    
+
                 <div className="hintsDetail-text-box col-lg-6 col-md-6 col-12 flex-j-a">
                     <div className="">
-                        <h5 className="text-center">{detail}</h5>
-                        <p>{content}</p>
+                        <h5 className="text-center">{ detail }</h5>
+                        <p>{ content }</p>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
-       
-      
-    )
-}   
 
-export default HintDetail
+
+    );
+};
+
+export default HintDetail;
 
 // eslint-disable-next-line no-lone-blocks
 {/* <div className="container-fluid  gx-5">
