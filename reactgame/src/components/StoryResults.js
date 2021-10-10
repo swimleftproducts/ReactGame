@@ -21,7 +21,7 @@ class StoryResults extends Component {
 
         const listOfCards = correctResults.map((card) => {
             return (
-                <ResultsCard imgSrc={ card.imgSrc } text={ card.text } key={ card.id } />
+                <ResultsCard imgSrc={ card.imageSrc } text={ card.name } key={ card.id } />
             );
         });
 

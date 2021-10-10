@@ -7,27 +7,29 @@ import gameSetUp from '../gameContent/Storylines';
 import Selection from './Selection';
 import Results from './Results';
 
+// logic to choose the story line for this time through
 
 
-const correctResults = [
-    {
-        imgSrc: "./assets/2/nazgul.jpeg",
-        text: "Nazgul",
-        id: "nazgul"
-    },
-    {
-        imgSrc: "./assets/2/glamdring.jpeg",
-        text: "Glamdring",
-        id: "glamdring"
-    },
-    {
-        imgSrc: "./assets/2/hobbiton.jpeg",
-        text: "Hobbiton",
-        id: "hobbiton"
-    }
-];
+
+
+
+// const correctResults = [
+//     gameSetUp.stories[0].selectables.weapon[0],
+//     {
+//         imgSrc: "./assets/2/glamdring.jpeg",
+//         text: "Glamdring",
+//         id: "glamdring"
+//     },
+//     {
+//         imgSrc: "./assets/2/hobbiton.jpeg",
+//         text: "Hobbiton",
+//         id: "hobbiton"
+//     }
+// ];
 
 const App = () => {
+    let correctResults = []
+
     //this is for setting the page that is shown
     const [userPage, setUserPage] = useState('Intro');
 
@@ -55,29 +57,10 @@ const App = () => {
         }
     ]);
 
-    // const [userChoice, setUserChoice]= useState([
-    //     {Value: "Weapone",
-    //      imgSrc:"../assets/2/glamdring.jpeg",
-    //      text:"Glamdring",
-    //      id: "glamdring"
-    //     },
-    //     {Value: "Name",
-    //      imgSrc:"../assets/2/nazgul.jpeg",
-    //      text:"Nazgul",
-    //      id:"nazgul"
-    //     },
-    //     {Value: "Location",
-    //      imgSrc:"../assets/2/hobbiton.jpeg",
-    //      text:"Hobbiton",
-    //      id:"hobbiton"
-    //     }
-    // ])
-
     useEffect(() => {
         const newStory = gameSetUp.choose();
         setStory(newStory);
-
-
+        
     }, []);
 
 
@@ -101,6 +84,12 @@ const App = () => {
                 <Selection userChoice={ userChoice } setUserChoice={ setUserChoice } story={ story } userPage={ userPage } setUserPage={ setUserPage } />
             );
         } else if ((userPage === "Results")) {
+            console.log(correctResults)
+            correctResults = [
+                story.selectables.weapon[0],
+                story.selectables.name[0],
+                story.selectables.location[0],
+            ];
             return (
                 <Results userChoice={ userChoice } correctResults={ correctResults } />
             );
