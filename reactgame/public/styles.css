@@ -244,11 +244,9 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
   max-width: 1920px;
   margin: 0 !important;
   padding: 0 !important;
-  overflow: scroll;
 }
 
 .selection-box {
@@ -275,6 +273,9 @@ button {
   width: 100%;
 }
 
+.btn-selection {
+  margin-top: 1rem;
+}
 .selected-card {
   width: 200px !important;
   height: 240px !important;
@@ -370,6 +371,16 @@ button {
 
   .card {
     width: 300px;
+  }
+
+  .btn-selection {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    margin: 0 0 0.8rem 0 !important;
+  }
+  .btn-selection button {
+    width: 100%;
   }
 }
 

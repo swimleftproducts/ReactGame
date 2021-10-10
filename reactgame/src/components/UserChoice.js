@@ -11,8 +11,8 @@ class UserChoice extends Component {
                 <div className="selected-card-img card-img-top">
                     <img src={ this.props.userChoice.imgSrc } alt="" />
                 </div>
-                <div className="card-body">
-                    <h5 className="card-title text-center">{ this.props.userChoice.type }</h5>
+                <div className="card-body flex-j-a flex-column p-0 ">
+                    <h5 className="card-title text-center m-0">{ this.props.userChoice.type }</h5>
                     <p className="card-text text-center">{ this.props.userChoice.id === "" ? "Make selection" : "Click here to reselect" }</p>
                 </div>
             </div>
