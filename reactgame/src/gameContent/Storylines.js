@@ -4,10 +4,10 @@ const gameSetUp = {
     {
       id: 0,
       title: 'The Shire',
-      introImageSrc: './assets/1/introimage.jpeg',
+      introImageSrc: './assets/1/introImage.jpeg',
 
-      background: {
-        1: {
+      background: [
+        {
           imageSrcSmall: './assets/1/background/card1/smallImage.jpeg',
           imageSrcLarge: './assets/1/background/card1/smallImage.jpeg',
           shortText: [
@@ -18,7 +18,7 @@ const gameSetUp = {
           fullText:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?',
         },
-        2: {
+        {
           imageSrcSmall: './assets/1/background/card2/smallImage.jpeg',
           imageSrcLarge: './assets/1/background/card2/smallImage.jpeg',
           shortText: [
@@ -29,7 +29,7 @@ const gameSetUp = {
           fullText:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?',
         },
-        3: {
+        {
           imageSrcSmall: './assets/1/background/card3/smallImage.jpeg',
           imageSrcLarge: './assets/1/background/card3/smallImage.jpeg',
           shortText: [
@@ -40,7 +40,7 @@ const gameSetUp = {
           fullText:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?',
         },
-      },
+      ],
       hints: {
         weapon: {
           imageSrcSmall: './assets/1/hints/weapon/weaponHintImage.jpeg',
@@ -286,4 +286,18 @@ const gameSetUp = {
     }
   },
 };
+
+
+Array.prototype.ChooseShortText = (arr) =>{
+  
+    // take number passed in as arr and find that object from background array
+    let specificBackground = this.background[arr].shortText
+    console.log(specificBackground)
+    //create randmon number  x where   0=< x  < background[arr].shortText.length
+    const randomNum = Math.floor(Math.random() * specificBackground.length)
+    console.log(randomNum)
+  
+    return specificBackground[randomNum] 
+}
+
 export default gameSetUp;

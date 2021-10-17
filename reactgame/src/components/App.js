@@ -34,7 +34,7 @@ const App = () => {
     const [userPage, setUserPage] = useState('Intro');
 
     // this is for story we are playing
-    const [story, setStory] = useState('');
+    const [story, setStory] = useState({});
     //this is for setting user selection
     const [userChoice, setUserChoice] = useState([
         {
@@ -69,11 +69,11 @@ const App = () => {
 
         if (userPage === 'Intro') {
             return (
-                <Intro setUserPage={ setUserPage } />
+                <Intro imgSrc={story.introImageSrc} title={story.title} setUserPage={ setUserPage } />
             );
         } else if (userPage === "Background") {
             return (
-                <Background setUserPage={ setUserPage } />
+                <Background backGroundInfo = {story.background} setUserPage={ setUserPage } />
             );
         } else if ((userPage === "HintsWeapon") || (userPage === "HintsLocation") || (userPage === "HintsName")) {
             return (
@@ -84,7 +84,7 @@ const App = () => {
                 <Selection userChoice={ userChoice } setUserChoice={ setUserChoice } story={ story } userPage={ userPage } setUserPage={ setUserPage } />
             );
         } else if ((userPage === "Results")) {
-            console.log(correctResults)
+            console.log(story)
             correctResults = [
                 story.selectables.weapon[0],
                 story.selectables.name[0],
@@ -106,5 +106,8 @@ const App = () => {
 
     );
 };
+
+
+
 
 export default App;

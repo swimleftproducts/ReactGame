@@ -2,92 +2,78 @@ import React, { useState } from 'react';
 import BackgroundCard from './BackgroundCard';
 import BackgroundDetail from './BackgroundDetail';
 
+const Background = ({ backGroundInfo, setUserPage }) => {
+  const [displayDetail, setDisplayDetail] = useState('');
+  // this is used to pull a single array out of the main info array for
+  // the background section of the game
+  const pullInfo = (displayDetail, array) => {
+    return array[displayDetail];
+  };
 
-const backgroundInfo = [
-     {
-          imgSrc: "./assets/2/nazgul.jpeg",
-          text: "Porem ipsum dolor sit amet, consectetur adipiscing elit. Quacumque enim ingredimur, in aliqua historia vestigium ponimus.",
-          teaser: "Porem ipsum dolor sit amet...",
-          id: "Background1"
-     },
-     {
-          imgSrc: "./assets/2/glamdring.jpeg",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quacumque enim ingredimur, in aliqua historia vestigium ponimus.",
-          teaser: "Porem ipsum dolor sit amet...",
-          id: "Background2"
-     },
-     {
-          imgSrc: "./assets/2/hobbiton.jpeg",
-          text: "Horem ipsum dolor sit amet, consectetur adipiscing elit. Quacumque enim ingredimur, in aliqua historia vestigium ponimus.",
-          teaser: "Porem ipsum dolor sit amet...",
-          id: "Background3"
-     }
-];
+  const renderBackgroundCard = (backGroundInfo) => {
+    
+    const listOfCards = backGroundInfo.map((card, index) => {
+      return (
+        <BackgroundCard
+          displayDetail={displayDetail}
+          onClick={setDisplayDetail}
+          imgSrc={card.imageSrcSmall}
+          text={card.shortText[(Math.floor(Math.random() * card.shortText.length))]}
+          id={index}
+          key={index}
+        />
+      );
+    });
 
+    return listOfCards;
+  };
 
+  const renderBackgroundDetail = () => {
+    if (displayDetail === '') {
+      return;
+    } else {
+      //pulls the object we are interested in from the background Array of objects
+      const infoArray = pullInfo(displayDetail, backGroundInfo);
 
-const Background = (props) => {
-     const [displayDetail, setDisplayDetail] = useState("");
+      return (
+        <BackgroundDetail
+          onClick={setDisplayDetail}
+          setUserPage={setUserPage}
+          imgSrc={infoArray.imageSrcLarge}
+          text={infoArray.fullText}
+        />
+      );
+    }
+  };
 
-     const renderBackgroundCard = (backgroundInfo) => {
-          const listOfCards = backgroundInfo.map((card) => {
-               return (
-                    <BackgroundCard displayDetail={ displayDetail } onClick={ setDisplayDetail } title={ card.id } imgSrc={ card.imgSrc } text={ card.teaser } id={ card.id } key={ card.id } />
-               );
-          });
-
-          return listOfCards;
-     };
-
-     const renderBackgroundDetail = () => {
-          if (displayDetail === "") {
-               return;
-          } else {
-               const infoArray = pullInfo(displayDetail, backgroundInfo);
-               return <BackgroundDetail onClick={ setDisplayDetail } title={ infoArray.id } setUserPage={ props.setUserPage } imgSrc={ infoArray.imgSrc } text={ infoArray.text } />;
-          }
-     };
-
-     // this is used to pull a single array out of the main info array for
-     // the background section of the game
-     const pullInfo = (displayDetail, array) => {
-          for (var i = 0; i < array.length; i++) {
-               if (array[i].id === displayDetail) {
-                    //this is the array that the user wanted displayed in detail
-                    return array[i];
-               }
-          }
-     };
-
-     const renderMainPage = () => {
-          if (displayDetail === "") {
-               return (
-                    <div class="mt-4 container-fluid">
-                         <div class="row justify-content-around" >
-                              { renderBackgroundCard(backgroundInfo) }
-                         </div>
-                         <div class="row justify-content-around ">
-                              <button onClick={ (params) => {
-                                   props.setUserPage('HintsWeapon');
-                              } } class="col-4 mt-5 btn btn-block btn-primary btn-lg  ">Hints</button>
-
-                         </div>
-                    </div>
-
-               );
-          }
-     };
-
-     return (
-          <div>
-               { renderBackgroundDetail() }
-               { renderMainPage() }
+  const renderMainPage = () => {
+    if (displayDetail === '') {
+      return (
+        <div className="mt-4 container-fluid">
+          <div className="row justify-content-around">
+            {renderBackgroundCard(backGroundInfo)}
           </div>
-     );
+          <div className="row justify-content-around ">
+            <button
+              onClick={(params) => {
+                setUserPage('HintsWeapon');
+              }}
+              className="col-4 mt-5 btn btn-block btn-primary btn-lg  "
+            >
+              Hints
+            </button>
+          </div>
+        </div>
+      );
+    }
+  };
 
+  return (
+    <div>
+      {renderBackgroundDetail()}
+      {renderMainPage()}
+    </div>
+  );
 };
-
-
-
 
 export default Background;
